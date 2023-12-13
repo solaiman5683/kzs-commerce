@@ -14,8 +14,8 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">KZS</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Products</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('any', ['index']) }}">KZS</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('second', ['products', 'index']) }}">Products</a></li>
                         <li class="breadcrumb-item active">New Product</li>
                     </ol>
                 </div>

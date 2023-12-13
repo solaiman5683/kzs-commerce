@@ -24,7 +24,7 @@
                                 {{ 0 }}
                             </span>
                         </h4>
-                        <a href="#" class="btn btn-sm btn-success waves-effect waves-light">
+                        <a href="{{ route('second', ['products', 'add-new']) }}" class="btn btn-sm btn-success waves-effect waves-light">
                             <i class="ri-add-fill me-1 align-middle"></i>
                             Add New Product
                         </a>
