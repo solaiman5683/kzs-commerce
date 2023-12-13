@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->string('productCount');
+            $table->string('productCount')->default(0);
             $table->string('icon');
-            $table->string('tags');
+            $table->string('tags')->nullable();
             $table->string('image');
-            $table->unsignedBigInteger('parent_id');
+            $table->unsignedBigInteger('parent_id')->nullable() ;
             $table->foreign('parent_id')->references('id')->on('categories');
             $table->timestamps();
         });

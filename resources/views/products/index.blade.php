@@ -21,10 +21,10 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="header-title">
                             All Products <span class="badge bg-soft-success text-success ms-2">
-                                {{ 0 }}
+                                {{ $products->count() }}
                             </span>
                         </h4>
-                        <a href="{{ route('second', ['products', 'add-new']) }}" class="btn btn-sm btn-success waves-effect waves-light">
+                        <a href="{{ route('second', ['products', 'create']) }}" class="btn btn-sm btn-success waves-effect waves-light">
                             <i class="ri-add-fill me-1 align-middle"></i>
                             Add New Product
                         </a>
@@ -43,6 +43,7 @@
                                 <th>Sale Price</th>
                                 <th>Featured</th>
                                 <th>New Arrival</th>
+                                <th>Sale</th>
                                 <th>Categories</th>
                                 <th>Actions</th>
                             </tr>
@@ -50,37 +51,44 @@
 
 
                         <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>
-                                    Product Name
-                                </td>
-                                <td>
-                                    Product Description
-                                </td>
-                                <td>
-                                    $100
-                                </td>
-                                <td>
-                                    $80
-                                </td>
-                                <td>
-                                    <span class="badge bg-soft-success text-success">Yes</span>
-                                </td>
-                                <td>
-                                    <span class="badge bg-soft-success text-success">Yes</span>
-                                </td>
-                                <td>
-                                    <span class="badge bg-soft-success text-success">Category 1</span>
-                                    <span class="badge bg-soft-success text-success">Category 2</span>
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
-                                    <a href="#" class="btn btn-xs btn-danger waves-effect waves-light">
-                                        <i class="ri-delete-bin-6-fill"></i>
-                                    </a>
-                                </td>
-                            </tr>
+
+                            @foreach ($products as $product)
+                                <tr>
+                                    <td>
+                                        {{ $product->id }}
+                                    </td>
+                                    <td>
+                                        {{ $product->name  }}
+                                    </td>
+                                    <td>
+                                        {{ $product->description }}
+                                    </td>
+                                    <td>
+                                        ${{ $product->price }}
+                                    </td>
+                                    <td>
+                                        ${{ $product->sale_price }}
+                                    </td>
+                                    <td>
+                                        <span class="badge {{ $product->featured == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->featured == 'true' ? 'Yes' : 'No' }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge {{ $product->isNewArrival == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->isNewArrival == 'true' ? 'Yes' : 'No' }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge {{ $product->isOnSale == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->isOnSale == 'true' ? 'Yes' : 'No' }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-soft-success text-success">{{  $product->category->name }}</span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
+                                        <a href="#" class="btn btn-xs btn-danger waves-effect waves-light">
+                                            <i class="ri-delete-bin-6-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
 
