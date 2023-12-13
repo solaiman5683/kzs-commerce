@@ -1,5 +1,5 @@
 /**
-* Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+* Theme: KZS - Admin Panel
 * Author: Coderthemes
 * Module/App: Main Js
 */
@@ -11,11 +11,11 @@ import.meta.glob([
 import select2 from 'select2';
 select2(window, jQuery);
 
-import 'jquery-mask-plugin/dist/jquery.mask.min.js'
+import 'jquery-mask-plugin/dist/jquery.mask.min.js';
 
 import bootstrap from 'bootstrap/dist/js/bootstrap.min';
-window.bootstrap = bootstrap;
 import 'simplebar';
+window.bootstrap = bootstrap;
 
 $(document).ready(() => {
     (function ($) {

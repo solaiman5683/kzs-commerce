@@ -1,5 +1,5 @@
 /*
-* Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+* Theme: KZS - Admin Panel
 * Author: Coderthemes
 * Component: Chat init js
 */
@@ -32,7 +32,7 @@
   // init
   ChatApp.prototype.init = function () {
     var $this = this;
-    //binding keypress event on chat input box - on enter we are adding the chat into chat list - 
+    //binding keypress event on chat input box - on enter we are adding the chat into chat list -
     $this.$chatInput.keypress(function (ev) {
       var p = ev.which;
       if (p == 13) {

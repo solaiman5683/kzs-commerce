@@ -1,5 +1,5 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Apex Treemap Charts
  */

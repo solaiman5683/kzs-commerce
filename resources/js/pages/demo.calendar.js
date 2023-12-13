@@ -1,19 +1,18 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Component: Full-Calendar
  */
 
-import bootstrap from 'bootstrap/dist/js/bootstrap.min';
-import { Calendar } from '@fullcalendar/core';
-import { Draggable } from '@fullcalendar/interaction';
-import interactionPlugin from '@fullcalendar/interaction';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
-import dayGridPlugin from '@fullcalendar/daygrid';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+import listPlugin from '@fullcalendar/list';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import bootstrap from 'bootstrap/dist/js/bootstrap.min';
 
-import 'fullcalendar/main.min.js'
+import 'fullcalendar/main.min.js';
 
 !function ($) {
   "use strict";

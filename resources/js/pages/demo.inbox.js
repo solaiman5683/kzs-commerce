@@ -1,7 +1,7 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
- * Module/App: Inbox 
+ * Module/App: Inbox
  */
 
 import Quill from 'quill/dist/quill.min.js';

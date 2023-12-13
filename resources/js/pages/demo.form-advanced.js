@@ -1,20 +1,20 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Time Picker
  */
 
-import t from 'bootstrap-touchspin/dist/jquery.bootstrap-touchspin'
+import t from 'bootstrap-touchspin/dist/jquery.bootstrap-touchspin';
 t(window, jQuery);
 
 
-import 'daterangepicker/moment.min.js';
-import 'daterangepicker/daterangepicker.js';
+import 'bootstrap-maxlength/dist/bootstrap-maxlength.min.js';
 import 'bootstrap-timepicker/js/bootstrap-timepicker.min.js';
-import  'bootstrap-maxlength/dist/bootstrap-maxlength.min.js';
+import 'daterangepicker/daterangepicker.js';
+import 'daterangepicker/moment.min.js';
 
-import 'flatpickr/dist/flatpickr.js'
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
+import 'flatpickr/dist/flatpickr.js';
 
 
 
