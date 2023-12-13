@@ -1,21 +1,21 @@
 /**
-* Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+* Theme: KZS - Admin Panel
 * Author: Coderthemes
 * Vector Maps
 */
 
 import 'admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js';
 import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-au-mill-en.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js';
 import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-europe-mill-en.js';
-import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-fr-merc-en.js';
 import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-es-merc.js';
 import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-es-mill.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-europe-mill-en.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-fr-merc-en.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js';
+import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js';
 
 ! function ($) {
 	"use strict";

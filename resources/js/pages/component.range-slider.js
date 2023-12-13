@@ -1,5 +1,5 @@
 /*
-* Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+* Theme: KZS - Admin Panel
 * Author: Coderthemes
 * Component: Range Slider init js
 */

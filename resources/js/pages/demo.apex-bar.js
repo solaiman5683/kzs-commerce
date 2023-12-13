@@ -1,5 +1,5 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Apex Bar Charts
  */
@@ -575,7 +575,7 @@ var chart = new ApexCharts(
 chart.render();
 
 
-// 
+//
 // CUSTOM DATALABELS BAR
 //
 
@@ -656,7 +656,7 @@ var chart = new ApexCharts(
 chart.render();
 
 
-// 
+//
 // Bar with Markers
 //
 
@@ -791,7 +791,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#bar-markers"), options);
 chart.render();
 
-// 
+//
 // Reversed Bar Chart
 //
 

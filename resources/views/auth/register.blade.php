@@ -10,9 +10,7 @@
 <body class="authentication-bg">
 
     <div class="position-absolute start-0 end-0 start-0 bottom-0 w-100 h-100">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:svgjs="http://svgjs.com/svgjs" width="100%" height="100%" preserveAspectRatio="none"
-            viewBox="0 0 1920 1028">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1920 1028">
             <g mask="url(&quot;#SvgjsMask1166&quot;)" fill="none">
                 <use xlink:href="#SvgjsSymbol1173" x="0" y="0"></use>
                 <use xlink:href="#SvgjsSymbol1173" x="0" y="720"></use>
@@ -33,290 +31,148 @@
                 <path d="M30 -30 L-30 30z" id="SvgjsPath1172"></path>
             </defs>
             <symbol id="SvgjsSymbol1173">
-                <use xlink:href="#SvgjsPath1167" x="30" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="30" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="30" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="30" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="30" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="30" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="30" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="30" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="30" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="30" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="30" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="30" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="90" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="90" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="90" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="90" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="90" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="90" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="90" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="90" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="90" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="90" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="90" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="90" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="150" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="150" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="150" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="150" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="150" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="150" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="150" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="150" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="150" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="150" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="150" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="150" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="210" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="210" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="210" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="210" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="210" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="270" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="270" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="270" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="270" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="270" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="270" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="270" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="270" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="270" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="270" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1172" x="270" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)" stroke-width="3"></use>
-                <use xlink:href="#SvgjsPath1171" x="270" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="330" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="330" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="330" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="330" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="330" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="330" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="330" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="330" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="330" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="330" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="330" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="330" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="390" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="390" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="390" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="390" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="390" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="390" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="390" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="390" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="390" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="390" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="390" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="390" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="450" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="450" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="450" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="450" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="450" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="450" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="450" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="450" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="450" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="450" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1172" x="450" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)" stroke-width="3"></use>
-                <use xlink:href="#SvgjsPath1168" x="450" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="510" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="510" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1172" x="510" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)" stroke-width="3"></use>
-                <use xlink:href="#SvgjsPath1171" x="510" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="510" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="510" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="510" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="510" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="510" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="510" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="570" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="570" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="570" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="570" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="570" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="570" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="570" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="570" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="570" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="570" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="570" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="570" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="630" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="630" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="630" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="630" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="630" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="630" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="630" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="630" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="630" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="630" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="630" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="630" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="690" y="30"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="690" y="90"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1170" x="690" y="150"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="690" y="210"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="690" y="270"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="690" y="330"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="690" y="390"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1167" x="690" y="450"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="690" y="510"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1169" x="690" y="570"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1168" x="690" y="630"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
-                <use xlink:href="#SvgjsPath1171" x="690" y="690"
-                    stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="30" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="30" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="30" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="30" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="30" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="30" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="30" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="30" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="30" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="30" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="30" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="30" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="90" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="90" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="90" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="90" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="90" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="90" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="90" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="90" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="90" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="90" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="90" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="90" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="150" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="150" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="150" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="150" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="150" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="150" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="150" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="150" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="150" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="150" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="150" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="150" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="210" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="210" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="210" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="210" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="210" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="270" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="270" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="270" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="270" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="270" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="270" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="270" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="270" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="270" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="270" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1172" x="270" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)" stroke-width="3"></use>
+                <use xlink:href="#SvgjsPath1171" x="270" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="330" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="330" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="330" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="330" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="330" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="330" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="330" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="330" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="330" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="330" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="330" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="330" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="390" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="390" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="390" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="390" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="390" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="390" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="390" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="390" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="390" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="390" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="390" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="390" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="450" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="450" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="450" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="450" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="450" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="450" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="450" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="450" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="450" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="450" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1172" x="450" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)" stroke-width="3"></use>
+                <use xlink:href="#SvgjsPath1168" x="450" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="510" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="510" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1172" x="510" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)" stroke-width="3"></use>
+                <use xlink:href="#SvgjsPath1171" x="510" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="510" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="510" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="510" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="510" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="510" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="510" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="570" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="570" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="570" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="570" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="570" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="570" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="570" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="570" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="570" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="570" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="570" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="570" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="630" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="630" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="630" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="630" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="630" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="630" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="630" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="630" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="630" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="630" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="630" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="630" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="690" y="30" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="690" y="90" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1170" x="690" y="150" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="690" y="210" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="690" y="270" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="690" y="330" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="690" y="390" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1167" x="690" y="450" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="690" y="510" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1169" x="690" y="570" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1168" x="690" y="630" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
+                <use xlink:href="#SvgjsPath1171" x="690" y="690" stroke="rgba(var(--ct-primary-rgb), 0.20)"></use>
             </symbol>
         </svg>
     </div>
@@ -329,8 +185,7 @@
                         <!-- Logo-->
                         <div class="card-header py-4 text-center bg-primary">
                             <a href="{{ route('any', 'index') }}">
-                                <span><img src="/images/logo.png" alt="logo"
-                                        height="22"></span>
+                                <span><img src="/images/logo.png" alt="logo" height="22"></span>
                             </a>
                         </div>
 
@@ -346,21 +201,18 @@
 
                                 <div class="mb-3">
                                     <label for="fullname" class="form-label">Full Name</label>
-                                    <input class="form-control" type="text" id="fullname"
-                                        placeholder="Enter your name" required>
+                                    <input class="form-control" type="text" id="fullname" placeholder="Enter your name" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="emailaddress" class="form-label">Email address</label>
-                                    <input class="form-control" type="email" id="emailaddress" required
-                                        placeholder="Enter your email">
+                                    <input class="form-control" type="email" id="emailaddress" required placeholder="Enter your email">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
                                     <div class="input-group input-group-merge">
-                                        <input type="password" id="password" class="form-control"
-                                            placeholder="Enter your password">
+                                        <input type="password" id="password" class="form-control" placeholder="Enter your password">
                                         <div class="input-group-text" data-password="false">
                                             <span class="password-eye"></span>
                                         </div>
@@ -370,8 +222,7 @@
                                 <div class="mb-3">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="checkbox-signup">
-                                        <label class="form-check-label" for="checkbox-signup">I accept <a
-                                                href="#" class="text-muted">Terms and Conditions</a></label>
+                                        <label class="form-check-label" for="checkbox-signup">I accept <a href="#" class="text-muted">Terms and Conditions</a></label>
                                     </div>
                                 </div>
 
@@ -386,9 +237,7 @@
 
                     <div class="row mt-3">
                         <div class="col-12 text-center">
-                            <p class="text-muted bg-body">Already have account? <a
-                                    href="{{ route('second', ['auth', 'login']) }}"
-                                    class="text-muted ms-1 link-offset-3 text-decoration-underline"><b>Log In</b></a>
+                            <p class="text-muted bg-body">Already have account? <a href="{{ route('second', ['auth', 'login']) }}" class="text-muted ms-1 link-offset-3 text-decoration-underline"><b>Log In</b></a>
                             </p>
                         </div> <!-- end col-->
                     </div>
@@ -406,7 +255,8 @@
         <span class="bg-body">
             <script>
                 document.write(new Date().getFullYear())
-            </script> © Attex - Coderthemes.com
+
+            </script> © KZS - Coderthemes.com
         </span>
     </footer>
 

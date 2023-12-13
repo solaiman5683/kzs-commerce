@@ -1,13 +1,13 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Apex Area Charts
  */
 
 import ApexCharts from 'apexcharts/dist/apexcharts.min.js';
-window.ApexCharts = ApexCharts;
 import 'daterangepicker/moment.min.js';
 import moment from 'moment';
+window.ApexCharts = ApexCharts;
 //
 // Basic Area Chart
 //

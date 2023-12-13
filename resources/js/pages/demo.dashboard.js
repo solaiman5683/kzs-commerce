@@ -1,11 +1,11 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Dashboard
  */
 
-import 'daterangepicker/moment.min.js';
 import 'daterangepicker/daterangepicker.js';
+import 'daterangepicker/moment.min.js';
 
 import ApexCharts from 'apexcharts/dist/apexcharts.min.js';
 
@@ -492,7 +492,7 @@ import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js
     Dashboard.prototype.init = function () {
       var $this = this;
       // font
-      // Chart.defaults.global.defaultFontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';        
+      // Chart.defaults.global.defaultFontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
 
       //default date range picker
       $('#dash-daterange').daterangepicker({

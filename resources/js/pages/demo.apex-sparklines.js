@@ -1,5 +1,5 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Apex Sparklines Charts
  */
@@ -63,7 +63,7 @@ var spark1 = {
     opacity: 0.2,
   },
   series: [{
-    name: 'Attex Sales ',
+    name: 'KZS Sales ',
     data: randomizeArray(sparklineData)
   }],
   yaxis: {
@@ -108,7 +108,7 @@ var spark2 = {
     opacity: 0.2,
   },
   series: [{
-    name: 'Attex Expenses ',
+    name: 'KZS Expenses ',
     data: randomizeArray(sparklineData)
   }],
   yaxis: {

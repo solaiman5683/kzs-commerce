@@ -1,11 +1,11 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Form Wizard
  */
 
-import '../plugins/bootstrap-wizard.js';
 import { Tab } from "bootstrap";
+import '../plugins/bootstrap-wizard.js';
 
 $(function () {
   "use strict";

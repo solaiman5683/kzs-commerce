@@ -73,8 +73,7 @@
                     <div class="app-search dropdown d-none d-lg-block">
                         <form>
                             <div class="input-group">
-                                <input type="search" class="form-control dropdown-toggle" placeholder="Search..."
-                                    id="top-search">
+                                <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
                                 <span class="ri-search-line search-icon"></span>
                             </div>
                         </form>
@@ -113,9 +112,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle"
-                                            src="/images/users/avatar-2.jpg"
-                                            alt="Generic placeholder image" height="32">
+                                        <img class="d-flex me-2 rounded-circle" src="/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
                                         <div class="w-100">
                                             <h5 class="m-0 fs-14">Erwin Brown</h5>
                                             <span class="fs-12 mb-0">UI Designer</span>
@@ -126,9 +123,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle"
-                                            src="/images/users/avatar-5.jpg"
-                                            alt="Generic placeholder image" height="32">
+                                        <img class="d-flex me-2 rounded-circle" src="/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
                                         <div class="w-100">
                                             <h5 class="m-0 fs-14">Jacob Deo</h5>
                                             <span class="fs-12 mb-0">Developer</span>
@@ -142,58 +137,48 @@
 
                 <ul class="topbar-menu d-flex align-items-center gap-3">
                     <li class="dropdown d-lg-none">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="ri-search-line fs-22"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
                             <form class="p-3">
-                                <input type="search" class="form-control" placeholder="Search ..."
-                                    aria-label="Recipient's username">
+                                <input type="search" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
                             </form>
                         </div>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="/images/flags/us.jpg" alt="user-image"
-                                class="me-0 me-sm-1" height="12">
-                            <span class="align-middle d-none d-lg-inline-block">English</span> <i
-                                class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i>
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
+                            <span class="align-middle d-none d-lg-inline-block">English</span> <i class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="/images/flags/germany.jpg" alt="user-image"
-                                    class="me-1" height="12"> <span class="align-middle">German</span>
+                                <img src="/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="/images/flags/italy.jpg" alt="user-image"
-                                    class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                <img src="/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="/images/flags/spain.jpg" alt="user-image"
-                                    class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                <img src="/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="/images/flags/russia.jpg" alt="user-image"
-                                    class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                <img src="/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                             </a>
 
                         </div>
                     </li>
 
                     <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="ri-notification-3-line fs-22"></i>
                             <span class="noti-icon-badge"></span>
                         </a>
@@ -216,8 +201,7 @@
                                 <h5 class="text-muted fs-12 fw-bold p-2 text-uppercase mb-0">Today</h5>
                                 <!-- item-->
 
-                                <a href="javascript:void(0);"
-                                    class="dropdown-item p-0 notify-item unread-noti card m-0 shadow-none">
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item unread-noti card m-0 shadow-none">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
@@ -226,8 +210,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
-                                                <h5 class="noti-item-title fw-semibold fs-14">Datacorp <small
-                                                        class="fw-normal text-muted float-end ms-1">1 min ago</small>
+                                                <h5 class="noti-item-title fw-semibold fs-14">Datacorp <small class="fw-normal text-muted float-end ms-1">1 min ago</small>
                                                 </h5>
                                                 <small class="noti-item-subtitle text-muted">Caleb Flakelar commented
                                                     on Admin</small>
@@ -237,8 +220,7 @@
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);"
-                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
@@ -247,8 +229,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
-                                                <h5 class="noti-item-title fw-semibold fs-14">Admin <small
-                                                        class="fw-normal text-muted float-end ms-1">1 hr ago</small>
+                                                <h5 class="noti-item-title fw-semibold fs-14">Admin <small class="fw-normal text-muted float-end ms-1">1 hr ago</small>
                                                 </h5>
                                                 <small class="noti-item-subtitle text-muted">New user
                                                     registered</small>
@@ -260,19 +241,16 @@
                                 <h5 class="text-muted fs-12 fw-bold p-2 mb-0 text-uppercase">Yesterday</h5>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);"
-                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <div class="notify-icon">
-                                                    <img src="/images/users/avatar-2.jpg"
-                                                        class="img-fluid rounded-circle" alt="" />
+                                                    <img src="/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
-                                                <h5 class="noti-item-title fw-semibold fs-14">Cristina Pride <small
-                                                        class="fw-normal text-muted float-end ms-1">1 day ago</small>
+                                                <h5 class="noti-item-title fw-semibold fs-14">Cristina Pride <small class="fw-normal text-muted float-end ms-1">1 day ago</small>
                                                 </h5>
                                                 <small class="noti-item-subtitle text-muted">Hi, How are you? What
                                                     about our next meeting</small>
@@ -284,8 +262,7 @@
                                 <h5 class="text-muted fs-12 fw-bold p-2 mb-0 text-uppercase">31 Jan 2023</h5>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);"
-                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
@@ -303,14 +280,12 @@
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);"
-                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <div class="notify-icon">
-                                                    <img src="/images/users/avatar-4.jpg"
-                                                        class="img-fluid rounded-circle" alt="" />
+                                                    <img src="/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
@@ -324,8 +299,7 @@
                             </div>
 
                             <!-- All-->
-                            <a href="javascript:void(0);"
-                                class="dropdown-item text-center text-primary text-decoration-underline fw-bold notify-item border-top border-light py-2">
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary text-decoration-underline fw-bold notify-item border-top border-light py-2">
                                 View All
                             </a>
 
@@ -333,8 +307,7 @@
                     </li>
 
                     <li class="dropdown d-none d-sm-inline-block">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="ri-apps-2-line fs-22"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
@@ -343,22 +316,19 @@
                                 <div class="row g-0">
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="/images/brands/github.png"
-                                                alt="Github">
+                                            <img src="/images/brands/github.png" alt="Github">
                                             <span>GitHub</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="/images/brands/bitbucket.png"
-                                                alt="bitbucket">
+                                            <img src="/images/brands/bitbucket.png" alt="bitbucket">
                                             <span>Bitbucket</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="/images/brands/dropbox.png"
-                                                alt="dropbox">
+                                            <img src="/images/brands/dropbox.png" alt="dropbox">
                                             <span>Dropbox</span>
                                         </a>
                                     </div>
@@ -367,22 +337,19 @@
                                 <div class="row g-0">
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="/images/brands/slack.png"
-                                                alt="slack">
+                                            <img src="/images/brands/slack.png" alt="slack">
                                             <span>Slack</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="/images/brands/dribbble.png"
-                                                alt="dribbble">
+                                            <img src="/images/brands/dribbble.png" alt="dribbble">
                                             <span>Dribbble</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="/images/brands/behance.png"
-                                                alt="Behance">
+                                            <img src="/images/brands/behance.png" alt="Behance">
                                             <span>Behance</span>
                                         </a>
                                     </div>
@@ -399,8 +366,7 @@
                     </li>
 
                     <li class="d-none d-sm-inline-block">
-                        <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left"
-                            title="Theme Mode">
+                        <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" title="Theme Mode">
                             <i class="ri-moon-line fs-22"></i>
                         </div>
                     </li>
@@ -413,11 +379,9 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
-                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <span class="account-user-avatar">
-                                <img src="/images/users/avatar-1.jpg" alt="user-image"
-                                    width="32" class="rounded-circle">
+                                <img src="/images/users/avatar-1.jpg" alt="user-image" width="32" class="rounded-circle">
                             </span>
                             <span class="d-lg-flex flex-column gap-1 d-none">
                                 <h5 class="my-0">
@@ -493,8 +457,7 @@
             </a>
 
             <!-- Sidebar Hover Menu Toggle Button -->
-            <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right"
-                title="Show Full Sidebar">
+            <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
                 <i class="ri-checkbox-blank-circle-line align-middle"></i>
             </div>
 
@@ -508,8 +471,7 @@
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
                     <a href="{{ route('second', ['pages', 'profile']) }}">
-                        <img src="/images/users/avatar-1.jpg" alt="user-image"
-                            height="42" class="rounded-circle shadow-sm">
+                        <img src="/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
                         <span class="leftbar-user-name mt-2">Tosha Minner</span>
                     </a>
                 </div>
@@ -520,8 +482,7 @@
                     <li class="side-nav-title">Navigation</li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false"
-                            aria-controls="sidebarDashboards" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                             <i class="ri-home-4-line"></i>
                             <span class="badge bg-success float-end">2</span>
                             <span> Dashboards </span>
@@ -555,8 +516,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false"
-                            aria-controls="sidebarEmail" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
                             <i class="ri-mail-line"></i>
                             <span> Email </span>
                             <span class="menu-arrow"></span>
@@ -574,8 +534,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarTasks" aria-expanded="false"
-                            aria-controls="sidebarTasks" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarTasks" aria-expanded="false" aria-controls="sidebarTasks" class="side-nav-link">
                             <i class="ri-task-line"></i>
                             <span> Tasks </span>
                             <span class="menu-arrow"></span>
@@ -609,8 +568,7 @@
                     <li class="side-nav-title">Custom</li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false"
-                            aria-controls="sidebarPages" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
                             <i class="ri-pages-line"></i>
                             <span> Pages </span>
                             <span class="menu-arrow"></span>
@@ -646,8 +604,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false"
-                            aria-controls="sidebarPagesAuth" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth" class="side-nav-link">
                             <i class="ri-shield-user-line"></i>
                             <span> Auth Pages </span>
                             <span class="menu-arrow"></span>
@@ -695,8 +652,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false"
-                            aria-controls="sidebarPagesError" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError" class="side-nav-link">
                             <i class="ri-error-warning-line"></i>
                             <span> Error Pages </span>
                             <span class="menu-arrow"></span>
@@ -717,8 +673,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarLayouts" aria-expanded="false"
-                            aria-controls="sidebarLayouts" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarLayouts" aria-expanded="false" aria-controls="sidebarLayouts" class="side-nav-link">
                             <i class="ri-layout-line"></i>
                             <span> Layouts </span>
                             <span class="menu-arrow"></span>
@@ -726,39 +681,25 @@
                         <div class="collapse" id="sidebarLayouts">
                             <ul class="side-nav-second-level">
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'horizontal']) }}"><span
-                                            class="menu-text">Horizontal</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'horizontal']) }}"><span class="menu-text">Horizontal</span></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'detached']) }}"><span
-                                            class="menu-text">Detached</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'detached']) }}"><span class="menu-text">Detached</span></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'full-view']) }}"><span
-                                            class="menu-text">Full View</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'full-view']) }}"><span class="menu-text">Full View</span></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'fullscreen-view']) }}"><span
-                                            class="menu-text">Fullscreen View</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'fullscreen-view']) }}"><span class="menu-text">Fullscreen View</span></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'hover-menu']) }}"><span
-                                            class="menu-text">Hover Menu</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'hover-menu']) }}"><span class="menu-text">Hover Menu</span></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'compact']) }}"><span
-                                            class="menu-text">Compact</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'compact']) }}"><span class="menu-text">Compact</span></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link"
-                                        href="{{ route('second', ['layouts-eg', 'icon-view']) }}"><span
-                                            class="menu-text">Icon View</span></a>
+                                    <a class="menu-link" href="{{ route('second', ['layouts-eg', 'icon-view']) }}"><span class="menu-text">Icon View</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -767,8 +708,7 @@
                     <li class="side-nav-title">Components</li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false"
-                            aria-controls="sidebarBaseUI" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" class="side-nav-link">
                             <i class="ri-briefcase-line"></i>
                             <span> Base UI </span>
                             <span class="menu-arrow"></span>
@@ -858,8 +798,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false"
-                            aria-controls="sidebarExtendedUI" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false" aria-controls="sidebarExtendedUI" class="side-nav-link">
                             <i class="ri-stack-line"></i>
                             <span> Extended UI </span>
                             <span class="menu-arrow"></span>
@@ -893,8 +832,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false"
-                            aria-controls="sidebarIcons" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons" class="side-nav-link">
                             <i class="ri-service-line"></i>
                             <span> Icons </span>
                             <span class="menu-arrow"></span>
@@ -912,8 +850,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false"
-                            aria-controls="sidebarCharts" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
                             <i class="ri-bar-chart-line"></i>
                             <span> Charts </span>
                             <span class="menu-arrow"></span>
@@ -921,8 +858,7 @@
                         <div class="collapse" id="sidebarCharts">
                             <ul class="side-nav-second-level">
                                 <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false"
-                                        aria-controls="sidebarApexCharts">
+                                    <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false" aria-controls="sidebarApexCharts">
                                         <span> Apex Charts </span>
                                         <span class="menu-arrow"></span>
                                     </a>
@@ -938,15 +874,13 @@
                                                 <a href="{{ route('second', ['charts', 'apex-bubble']) }}">Bubble</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-candlestick']) }}">Candlestick</a>
+                                                <a href="{{ route('second', ['charts', 'apex-candlestick']) }}">Candlestick</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('second', ['charts', 'apex-column']) }}">Column</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-heatmap']) }}">Heatmap</a>
+                                                <a href="{{ route('second', ['charts', 'apex-heatmap']) }}">Heatmap</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('second', ['charts', 'apex-line']) }}">Line</a>
@@ -955,16 +889,13 @@
                                                 <a href="{{ route('second', ['charts', 'apex-mixed']) }}">Mixed</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-timeline']) }}">Timeline</a>
+                                                <a href="{{ route('second', ['charts', 'apex-timeline']) }}">Timeline</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-boxplot']) }}">Boxplot</a>
+                                                <a href="{{ route('second', ['charts', 'apex-boxplot']) }}">Boxplot</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-treemap']) }}">Treemap</a>
+                                                <a href="{{ route('second', ['charts', 'apex-treemap']) }}">Treemap</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('second', ['charts', 'apex-pie']) }}">Pie</a>
@@ -973,27 +904,23 @@
                                                 <a href="{{ route('second', ['charts', 'apex-radar']) }}">Radar</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-radialbar']) }}">RadialBar</a>
+                                                <a href="{{ route('second', ['charts', 'apex-radialbar']) }}">RadialBar</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-scatter']) }}">Scatter</a>
+                                                <a href="{{ route('second', ['charts', 'apex-scatter']) }}">Scatter</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('second', ['charts', 'apex-polar-area']) }}">Polar
                                                     Area</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'apex-sparklines']) }}">Sparklines</a>
+                                                <a href="{{ route('second', ['charts', 'apex-sparklines']) }}">Sparklines</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarChartJSCharts" aria-expanded="false"
-                                        aria-controls="sidebarChartJSCharts">
+                                    <a data-bs-toggle="collapse" href="#sidebarChartJSCharts" aria-expanded="false" aria-controls="sidebarChartJSCharts">
                                         <span> ChartJS </span>
                                         <span class="menu-arrow"></span>
                                     </a>
@@ -1009,8 +936,7 @@
                                                 <a href="{{ route('second', ['charts', 'chartjs-line']) }}">Line</a>
                                             </li>
                                             <li>
-                                                <a
-                                                    href="{{ route('second', ['charts', 'chartjs-other']) }}">Other</a>
+                                                <a href="{{ route('second', ['charts', 'chartjs-other']) }}">Other</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -1020,8 +946,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false"
-                            aria-controls="sidebarForms" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms" class="side-nav-link">
                             <i class="ri-survey-line"></i>
                             <span> Forms </span>
                             <span class="menu-arrow"></span>
@@ -1051,8 +976,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarTables" aria-expanded="false"
-                            aria-controls="sidebarTables" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" class="side-nav-link">
                             <i class="ri-table-line"></i>
                             <span> Tables </span>
                             <span class="menu-arrow"></span>
@@ -1070,8 +994,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarMaps" aria-expanded="false"
-                            aria-controls="sidebarMaps" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" class="side-nav-link">
                             <i class="ri-treasure-map-line"></i>
                             <span> Maps </span>
                             <span class="menu-arrow"></span>
@@ -1089,8 +1012,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false"
-                            aria-controls="sidebarMultiLevel" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" class="side-nav-link">
                             <i class="ri-share-line"></i>
                             <span> Multi Level </span>
                             <span class="menu-arrow"></span>
@@ -1098,8 +1020,7 @@
                         <div class="collapse" id="sidebarMultiLevel">
                             <ul class="side-nav-second-level">
                                 <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false"
-                                        aria-controls="sidebarSecondLevel">
+                                    <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false" aria-controls="sidebarSecondLevel">
                                         <span> Second Level </span>
                                         <span class="menu-arrow"></span>
                                     </a>
@@ -1115,8 +1036,7 @@
                                     </div>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false"
-                                        aria-controls="sidebarThirdLevel">
+                                    <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false" aria-controls="sidebarThirdLevel">
                                         <span> Third Level </span>
                                         <span class="menu-arrow"></span>
                                     </a>
@@ -1126,8 +1046,7 @@
                                                 <a href="javascript: void(0);">Item 1</a>
                                             </li>
                                             <li class="side-nav-item">
-                                                <a data-bs-toggle="collapse" href="#sidebarFourthLevel"
-                                                    aria-expanded="false" aria-controls="sidebarFourthLevel">
+                                                <a data-bs-toggle="collapse" href="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
                                                     <span> Item 2 </span>
                                                     <span class="menu-arrow"></span>
                                                 </a>
@@ -1174,8 +1093,7 @@
                                 <div class="page-title-right">
                                     <form class="d-flex">
                                         <div class="input-group">
-                                            <input type="text" class="form-control shadow border-0"
-                                                id="dash-daterange">
+                                            <input type="text" class="form-control shadow border-0" id="dash-daterange">
                                             <span class="input-group-text bg-primary border-primary text-white">
                                                 <i class="ri-calendar-todo-fill fs-13"></i>
                                             </span>
@@ -1206,8 +1124,7 @@
                                             </p>
                                         </div>
                                         <div class="flex-shrink-0">
-                                            <div id="widget-customers" class="apex-charts"
-                                                data-colors="#47ad77,#e3e9ee"></div>
+                                            <div id="widget-customers" class="apex-charts" data-colors="#47ad77,#e3e9ee"></div>
                                         </div>
                                     </div>
                                 </div> <!-- end card-body-->
@@ -1289,8 +1206,7 @@
                                                 <span>Since last month</span>
                                             </p>
                                         </div>
-                                        <div id="widget-conversation" class="apex-charts"
-                                            data-colors="#f15776,#e3e9ee"></div>
+                                        <div id="widget-conversation" class="apex-charts" data-colors="#f15776,#e3e9ee"></div>
                                     </div>
 
                                 </div> <!-- end card-body-->
@@ -1304,8 +1220,7 @@
                                 <div class="d-flex card-header justify-content-between align-items-center">
                                     <h4 class="header-title">Revenue</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="ri-more-2-fill"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1334,8 +1249,7 @@
                                                 <p class="text-muted mt-3"><i class="ri-donut-chart-fill"></i>
                                                     Previous Week</p>
                                                 <h3 class="fw-normal mb-3">
-                                                    <span>$6,523.25 <i
-                                                            class="ri-corner-right-up-fill text-success"></i></span>
+                                                    <span>$6,523.25 <i class="ri-corner-right-up-fill text-success"></i></span>
                                                 </h3>
                                             </div>
                                             <div class="col">
@@ -1349,17 +1263,15 @@
                                                 <p class="text-muted mt-3"><i class="ri-donut-chart-fill"></i>
                                                     Customers</p>
                                                 <h3 class="fw-normal mb-3">
-                                                    <span>69k <i
-                                                            class="ri-corner-right-down-line text-danger"></i></span>
+                                                    <span>69k <i class="ri-corner-right-down-line text-danger"></i></span>
                                                 </h3>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body pt-0">
-                                    <div >
-                                        <div id="revenue-chart" class="apex-charts mt-3"
-                                            data-colors="#3e60d5,#47ad77"></div>
+                                    <div>
+                                        <div id="revenue-chart" class="apex-charts mt-3" data-colors="#3e60d5,#47ad77"></div>
                                     </div>
                                 </div> <!-- end card-body-->
                             </div> <!-- end card-->
@@ -1369,8 +1281,7 @@
                                 <div class="d-flex card-header justify-content-between align-items-center">
                                     <h4 class="header-title">Total Sales</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="ri-more-2-fill"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1386,24 +1297,20 @@
                                     </div>
                                 </div>
                                 <div class="card-body p-0">
-                                    <div class="alert alert-warning rounded-0 mb-0 border-end-0 border-start-0"
-                                        role="alert">
-                                        Something went wrong. Please <strong><a href="#!"
-                                                class="alert-link text-decoration-underline">refresh</a></strong> to
+                                    <div class="alert alert-warning rounded-0 mb-0 border-end-0 border-start-0" role="alert">
+                                        Something went wrong. Please <strong><a href="#!" class="alert-link text-decoration-underline">refresh</a></strong> to
                                         get new data!
                                     </div>
                                 </div>
 
                                 <div class="card-body pt-0">
-                                    <div id="average-sales" class="apex-charts mb-3"
-                                        data-colors="#3e60d5,#47ad77,#fa5c7c,#16a7e9"></div>
+                                    <div id="average-sales" class="apex-charts mb-3" data-colors="#3e60d5,#47ad77,#fa5c7c,#16a7e9"></div>
 
                                     <h5 class="mb-1 mt-0 fw-normal">Brooklyn, New York</h5>
                                     <div class="progress-w-percent">
                                         <span class="progress-value fw-bold">72k </span>
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" style="width: 72%;"
-                                                aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
@@ -1411,8 +1318,7 @@
                                     <div class="progress-w-percent">
                                         <span class="progress-value fw-bold">39k </span>
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" style="width: 39%;"
-                                                aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
@@ -1420,8 +1326,7 @@
                                     <div class="progress-w-percent mb-0">
                                         <span class="progress-value fw-bold">61k </span>
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" style="width: 61%;"
-                                                aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar" role="progressbar" style="width: 61%;" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div> <!-- end card-body-->
@@ -1436,13 +1341,11 @@
                             <div class="card">
                                 <div class="d-flex card-header justify-content-between align-items-center">
                                     <h4 class="header-title">Top Selling Products</h4>
-                                    <a href="javascript:void(0);" class="btn btn-sm btn-info">Export <i
-                                            class="ri-download-line ms-1"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-sm btn-info">Export <i class="ri-download-line ms-1"></i></a>
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
-                                        <table
-                                            class="table table-borderless table-hover table-nowrap table-centered m-0">
+                                        <table class="table table-borderless table-hover table-nowrap table-centered m-0">
                                             <thead class="border-top border-bottom bg-light-subtle border-light">
                                                 <tr>
                                                     <th class="py-1">Product</th>
@@ -1499,8 +1402,7 @@
                                         </table>
                                     </div>
                                     <div class="text-center">
-                                        <a href="#!"
-                                            class="text-primary text-decoration-underline fw-bold btn mb-2">View
+                                        <a href="#!" class="text-primary text-decoration-underline fw-bold btn mb-2">View
                                             All</a>
                                     </div>
                                 </div>
@@ -1512,8 +1414,7 @@
                                 <div class="d-flex card-header justify-content-between align-items-center">
                                     <h4 class="header-title">Revenue By Locations</h4>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="ri-more-2-fill"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
@@ -1535,7 +1436,7 @@
                                             <div id="world-map-markers" class="mt-3 mb-3" style="height: 298px">
                                             </div>
                                         </div>
-                                        <div class="col-lg-4" >
+                                        <div class="col-lg-4">
                                             <div id="country-chart" class="apex-charts" data-colors="#47ad77"></div>
                                         </div>
                                     </div>
@@ -1558,7 +1459,8 @@
                         <div class="col-md-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Attex - Coderthemes.com
+
+                            </script> © KZS - Coderthemes.com
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-end footer-links d-none d-md-block">
@@ -1585,8 +1487,7 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="theme-settings-offcanvas">
         <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
             <h5 class="text-white m-0">Theme Settings</h5>
-            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body p-0">
@@ -1600,14 +1501,12 @@
 
                     <div class="d-flex flex-column gap-2">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="data-bs-theme"
-                                id="layout-color-light" value="light">
+                            <input class="form-check-input" type="checkbox" name="data-bs-theme" id="layout-color-light" value="light">
                             <label class="form-check-label" for="layout-color-light">Light</label>
                         </div>
 
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="data-bs-theme"
-                                id="layout-color-dark" value="dark">
+                            <input class="form-check-input" type="checkbox" name="data-bs-theme" id="layout-color-dark" value="dark">
                             <label class="form-check-label" for="layout-color-dark">Dark</label>
                         </div>
                     </div>
@@ -1617,23 +1516,20 @@
 
                         <div class="d-flex flex-column gap-2">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-layout-mode"
-                                    id="layout-mode-fluid" value="fluid">
+                                <input class="form-check-input" type="checkbox" name="data-layout-mode" id="layout-mode-fluid" value="fluid">
                                 <label class="form-check-label" for="layout-mode-fluid">Fluid</label>
                             </div>
 
                             <div id="layout-boxed">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" name="data-layout-mode"
-                                        id="layout-mode-boxed" value="boxed">
+                                    <input class="form-check-input" type="checkbox" name="data-layout-mode" id="layout-mode-boxed" value="boxed">
                                     <label class="form-check-label" for="layout-mode-boxed">Boxed</label>
                                 </div>
                             </div>
 
                             <div id="layout-detached">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" name="data-layout-mode"
-                                        id="data-layout-detached" value="detached">
+                                    <input class="form-check-input" type="checkbox" name="data-layout-mode" id="data-layout-detached" value="detached">
                                     <label class="form-check-label" for="data-layout-detached">Detached</label>
                                 </div>
                             </div>
@@ -1644,20 +1540,17 @@
 
                     <div class="d-flex flex-column gap-2">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="data-topbar-color"
-                                id="topbar-color-light" value="light">
+                            <input class="form-check-input" type="checkbox" name="data-topbar-color" id="topbar-color-light" value="light">
                             <label class="form-check-label" for="topbar-color-light">Light</label>
                         </div>
 
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="data-topbar-color"
-                                id="topbar-color-dark" value="dark">
+                            <input class="form-check-input" type="checkbox" name="data-topbar-color" id="topbar-color-dark" value="dark">
                             <label class="form-check-label" for="topbar-color-dark">Dark</label>
                         </div>
 
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="data-topbar-color"
-                                id="topbar-color-brand" value="brand">
+                            <input class="form-check-input" type="checkbox" name="data-topbar-color" id="topbar-color-brand" value="brand">
                             <label class="form-check-label" for="topbar-color-brand">Brand</label>
                         </div>
                     </div>
@@ -1667,19 +1560,16 @@
 
                         <div class="d-flex flex-column gap-2">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-menu-color"
-                                    id="leftbar-color-light" value="light">
+                                <input class="form-check-input" type="checkbox" name="data-menu-color" id="leftbar-color-light" value="light">
                                 <label class="form-check-label" for="leftbar-color-light">Light</label>
                             </div>
 
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-menu-color"
-                                    id="leftbar-color-dark" value="dark">
+                                <input class="form-check-input" type="checkbox" name="data-menu-color" id="leftbar-color-dark" value="dark">
                                 <label class="form-check-label" for="leftbar-color-dark">Dark</label>
                             </div>
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-menu-color"
-                                    id="leftbar-color-brand" value="brand">
+                                <input class="form-check-input" type="checkbox" name="data-menu-color" id="leftbar-color-brand" value="brand">
                                 <label class="form-check-label" for="leftbar-color-brand">Brand</label>
                             </div>
                         </div>
@@ -1690,38 +1580,32 @@
 
                         <div class="d-flex flex-column gap-2">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-sidenav-size"
-                                    id="leftbar-size-default" value="default">
+                                <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-default" value="default">
                                 <label class="form-check-label" for="leftbar-size-default">Default</label>
                             </div>
 
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-sidenav-size"
-                                    id="leftbar-size-compact" value="compact">
+                                <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-compact" value="compact">
                                 <label class="form-check-label" for="leftbar-size-compact">Compact</label>
                             </div>
 
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-sidenav-size"
-                                    id="leftbar-size-small" value="condensed">
+                                <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-small" value="condensed">
                                 <label class="form-check-label" for="leftbar-size-small">Condensed</label>
                             </div>
 
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-sidenav-size"
-                                    id="leftbar-size-small-hover" value="sm-hover">
+                                <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-small-hover" value="sm-hover">
                                 <label class="form-check-label" for="leftbar-size-small-hover">Hover View</label>
                             </div>
 
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-sidenav-size"
-                                    id="leftbar-size-full" value="full">
+                                <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-full" value="full">
                                 <label class="form-check-label" for="leftbar-size-full">Full Layout</label>
                             </div>
 
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="data-sidenav-size"
-                                    id="leftbar-size-fullscreen" value="fullscreen">
+                                <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-fullscreen" value="fullscreen">
                                 <label class="form-check-label" for="leftbar-size-fullscreen">Fullscreen
                                     Layout</label>
                             </div>
@@ -1732,14 +1616,11 @@
                         <h5 class="my-3 fs-16 fw-bold">Layout Position</h5>
 
                         <div class="btn-group checkbox" role="group">
-                            <input type="radio" class="btn-check" name="data-layout-position"
-                                id="layout-position-fixed" value="fixed">
+                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed" value="fixed">
                             <label class="btn btn-soft-primary w-sm" for="layout-position-fixed">Fixed</label>
 
-                            <input type="radio" class="btn-check" name="data-layout-position"
-                                id="layout-position-scrollable" value="scrollable">
-                            <label class="btn btn-soft-primary w-sm ms-0"
-                                for="layout-position-scrollable">Scrollable</label>
+                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-scrollable" value="scrollable">
+                            <label class="btn btn-soft-primary w-sm ms-0" for="layout-position-scrollable">Scrollable</label>
                         </div>
                     </div>
 
@@ -1747,8 +1628,7 @@
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <label class="fs-16 fw-bold m-0" for="sidebaruser-check">Sidebar User Info</label>
                             <div class="form-check form-switch">
-                                <input type="checkbox" class="form-check-input" name="  sidebar-user"
-                                    id="sidebaruser-check">
+                                <input type="checkbox" class="form-check-input" name="  sidebar-user" id="sidebaruser-check">
                             </div>
                         </div>
                     </div>

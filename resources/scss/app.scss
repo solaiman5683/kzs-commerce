@@ -1,5 +1,5 @@
 /*
-Template Name: Attex - Responsive Bootstrap 5 Admin Dashboard
+Template Name: KZS - Admin Panel
 Version: 1.0.0
 Author: CoderThemes
 Email: support@coderthemes.com
@@ -10,7 +10,7 @@ File: Main Css File
 // Figtree fonts
 //
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
 //Core files
 
 @import "./node_modules/bootstrap/scss/functions";
@@ -23,7 +23,6 @@ File: Main Css File
 @import "custom/components/utilities";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
-
 // Structure
 @import "custom/structure/sidenav";
 @import "custom/structure/topbar";
@@ -32,7 +31,6 @@ File: Main Css File
 @import "custom/structure/footer";
 // Horizontal nav
 @import "custom/structure/horizontal-nav";
-
 
 // Components
 @import "custom/components/root";

@@ -1,5 +1,5 @@
 /**
-* Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+* Theme: KZS - Admin Panel
 * Author: Coderthemes
 * Google Maps
 */
@@ -566,7 +566,7 @@ import GMaps from 'gmaps/gmaps.min.js';
     $.GoogleMap = new GoogleMap, $.GoogleMap.Constructor = GoogleMap
 }(window.jQuery),
 
-  //initializing 
+  //initializing
   function ($) {
     "use strict";
     $.GoogleMap.init()

@@ -215,7 +215,8 @@
         <span class="bg-body">
             <script>
                 document.write(new Date().getFullYear())
-            </script> © Attex - Coderthemes.com
+
+            </script> © KZS - Coderthemes.com
         </span>
     </footer>
 

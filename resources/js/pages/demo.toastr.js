@@ -1,10 +1,10 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Toastr js
  */
 
-import 'jquery-toast-plugin/src/jquery.toast'
+import 'jquery-toast-plugin/src/jquery.toast';
 
 // Notification
 
@@ -14,7 +14,7 @@ import 'jquery-toast-plugin/src/jquery.toast'
   var NotificationApp = function () { };
 
   NotificationApp.prototype.send = function (heading, body, position, loaderBgColor, icon, hideAfter, stack, showHideTransition) {
-    // default      
+    // default
     if (!hideAfter)
       hideAfter = 3000;
     if (!stack)

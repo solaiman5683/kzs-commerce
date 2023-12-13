@@ -1,11 +1,11 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Dashboard Analytics
  */
 
-import 'daterangepicker/moment.min.js';
 import 'daterangepicker/daterangepicker.js';
+import 'daterangepicker/moment.min.js';
 
 import 'admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js';
 import 'admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js';
@@ -427,7 +427,7 @@ import 'chart.js/dist/chart.min.js';
 
     new ApexCharts(document.querySelector("#campaign-sent-chart"), options1).render();
 
-    // 
+    //
     // New Leads Chart
     //
     var colors = ["#16a7e9"];
@@ -517,12 +517,12 @@ import 'chart.js/dist/chart.min.js';
     AnalyticsDashboard.prototype.init = function () {
       var $this = this;
       // font
-      // Chart.defaults.global.defaultFontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';        
+      // Chart.defaults.global.defaultFontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
 
       //default date range picker
       $('#dash-daterange').daterangepicker({
         singleDatePicker: true
-      }); 
+      });
 
       // init charts
       this.initCharts();

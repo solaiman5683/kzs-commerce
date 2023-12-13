@@ -1,5 +1,5 @@
 /*
-Template Name: Attex - Responsive Bootstrap 5 Admin Dashboard
+Template Name: KZS - Admin Panel
 Author: CoderThemes
 Website: https://coderthemes.com/
 Contact: support@coderthemes.com

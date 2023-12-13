@@ -1,14 +1,14 @@
 /**
- * Theme: Attex - Responsive Bootstrap 5 Admin Dashboard
+ * Theme: KZS - Admin Panel
  * Author: Coderthemes
  * Module/App: Widgets
  */
 
-import 'daterangepicker/moment.min.js';
 import ApexCharts from 'apexcharts/dist/apexcharts.min.js';
+import 'daterangepicker/moment.min.js';
 
-import './component.todo'
-import './component.chat'
+import './component.chat';
+import './component.todo';
 
 Apex.grid = {
   padding: {
@@ -75,7 +75,7 @@ var options1 = {
 new ApexCharts(document.querySelector("#campaign-sent-chart"), options1).render();
 
 
-// 
+//
 // New Leads Chart
 //
 var colors = ["#3e60d5"];
