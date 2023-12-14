@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
@@ -39,8 +40,19 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::post('create', [ProductController::class, 'storeProduct'])->name('storeProduct');
         Route::get('{id}', [ProductController::class, 'showProduct'])->name('showProduct');
         Route::get('{id}/edit', [ProductController::class, 'editProduct'])->name('editProduct');
-        Route::put('{id}/edit', [ProductController::class, 'updateProduct'])->name('updateProduct');
-        Route::delete('{id}/delete', [ProductController::class, 'deleteProduct'])->name('deleteProduct');
+        Route::post('{id}/edit', [ProductController::class, 'updateProduct'])->name('updateProduct');
+        Route::get('{id}/delete', [ProductController::class, 'deleteProduct'])->name('deleteProduct');
+    });
+    Route::group(['prefix' => 'categories'], function () {
+        // redirect / to /products/index
+        Route::get('', fn()=>redirect()->route('categories'))->name('categoriesRoot');
+        Route::get('index', [CategoryController::class, 'categories'])->name('categories');
+        Route::get('create', [CategoryController::class, 'createCategory'])->name('createCategory');
+        Route::post('create', [CategoryController::class, 'storeCategory'])->name('storeCategory');
+        Route::get('{id}', [CategoryController::class, 'showCategory'])->name('showCategory');
+        Route::get('{id}/edit', [CategoryController::class, 'editCategory'])->name('editCategory');
+        Route::post('{id}/edit', [CategoryController::class, 'updateCategory'])->name('updateCategory');
+        Route::get('{id}/delete', [CategoryController::class, 'deleteCategory'])->name('deleteCategory');
     });
 
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');

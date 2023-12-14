@@ -74,6 +74,25 @@
                     </ul>
                 </div>
             </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarProducts" aria-expanded="false" aria-controls="sidebarProducts" class="side-nav-link">
+                    <i
+                        class="ri-links-fill"
+                    ></i>
+                    <span> Categories </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarProducts">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{ route('second', ['categories', 'index']) }}">All Categories</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('second', ['categories', 'create']) }}">Add New Category</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
 
             {{-- <li class="side-nav-item">
                 <a href="{{ route('second', ['apps', 'calendar']) }}" class="side-nav-link">

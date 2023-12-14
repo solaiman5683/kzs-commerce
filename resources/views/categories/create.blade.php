@@ -33,12 +33,12 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('any', ['index']) }}">KZS</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('second', ['products', 'index']) }}">Products</a></li>
-                        <li class="breadcrumb-item active">New Product</li>
+                        <li class="breadcrumb-item"><a href="{{ route('second', ['categories', 'index']) }}">Categories</a></li>
+                        <li class="breadcrumb-item active">New Category</li>
                     </ol>
                 </div>
                 <h4 class="page-title">
-                    Add New Product
+                    Add New Category
                 </h4>
             </div>
         </div>
@@ -50,18 +50,18 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">
-                        Product Details
+                        Category Details
                     </h4>
                     <p class="text-muted fs-14">
-                        Please fill the form to add a new product. All fields are required. You can add a new product from here.
+                        Please fill the form to add a new Category. All fields are required. You can add a new Category from here.
                     </p>
 
-                    <form action="{{ route('second', ['products', 'create']) }}" enctype="multipart/form-data" class="needs-validation" method="POST" novalidate>
+                    <form action="{{ route('second', ['categories', 'create']) }}" enctype="multipart/form-data" class="needs-validation" method="POST" novalidate>
                         @csrf
                         <div class="row">
                             <div class="mb-2 col-lg-6">
                                 <label class="form-label" for="name">
-                                    Product Name
+                                    Category Name
                                 </label>
                                 <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="name" required>
                                 <div class="valid-feedback">
@@ -84,59 +84,20 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="mb-2">
-                            <label class="form-label" for="description">
-                                Product Description
-                            </label>
-                            <textarea class="form-control" id="description" placeholder="Enter Product Descriptiom" name="description" required></textarea>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                            <div class="invalid-feedback">
-                                Please provide a valid product name.
-                            </div>
-                        </div>
-
                         <div class="row">
                             <div class="mb-2 col-lg-4">
-                                <label class="form-label" for="price">
-                                    Price
+                                <label class="form-label" for="icon">
+                                    Icon
                                 </label>
-                                <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="price" placeholder="Enter Price" name="price" required>
+                                <input type="file" accept="image/*" class="form-control" id="icon" name="icon" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please provide a valid Price for the product.
+                                    Please provide a valid image for the product.
                                 </div>
                             </div>
                             <div class="mb-2 col-lg-4">
-                                <label class="form-label" for="sale_price">
-                                    Sell Price
-                                </label>
-                                <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="sale_price" placeholder="Enter Sale Price" name="sale_price">
-                            </div>
-                            <div class="mb-2 col-lg-4">
-                                <label class="form-label" for="categories">
-                                    Categories
-                                </label>
-                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="categories" name="categories[]" required>
-                                    {{-- {{ dd($categories) }} --}}
-                                    @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endforeach
-                                    {{-- <optgroup label="Fashion">
-                                        <option value="man">Man's Fashion</option>
-                                        <option value="women">
-                                            Women's Fashion
-                                        </option>
-                                    </optgroup> --}}
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="mb-2 col-lg-6">
                                 <label class="form-label" for="image">
                                     Image
                                 </label>
@@ -148,32 +109,24 @@
                                     Please provide a valid image for the product.
                                 </div>
                             </div>
-                            <div class="mb-2 col-lg-6">
-                                <label class="form-label" for="gallery">
-                                    Gellary Images
+                            <div class="mb-2 col-lg-4">
+                                <label class="form-label" for="parent_id">
+                                    Parent Category
                                 </label>
-                                <input type="file" accept="image/*" multiple class="form-control" id="gallery" name="gallery[]" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please provide a valid image for the product.
-                                </div>
+                                <select class="select2 form-control" data-toggle="select2" id="parent_id" name="parent_id">
+                                    {{-- {{ dd($categories) }} --}}
+                                    <option value="">No Parent Category</option>
+                                    @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                    {{-- <optgroup label="Fashion">
+                                        <option value="man">Man's Fashion</option>
+                                        <option value="women">
+                                            Women's Fashion
+                                        </option>
+                                    </optgroup> --}}
+                                </select>
                             </div>
-                        </div>
-                        <div class="mb-2 mt-3">
-                            <label class="form-label pe-4" for="featured">
-                                <input type="checkbox" id="featured" name="featured">
-                                Is this product featured?
-                            </label>
-                            <label class="form-label pe-4" for="isNewArrival">
-                                <input type="checkbox" id="isNewArrival" name="isNewArrival">
-                                Is this product new Arrival?
-                            </label>
-                            <label class="form-label" for="isOnSale">
-                                <input type="checkbox" id="isOnSale" name="isOnSale">
-                                Is this product on sale?
-                            </label>
                         </div>
 
                         <button class="btn btn-primary" type="submit">Submit form</button>

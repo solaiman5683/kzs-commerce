@@ -19,7 +19,7 @@ class ProductController extends Controller
 
     public function products()
     {
-        $products = Product::with('category')->get();
+        $products = Product::with('categories')->get();
         // dd($products);
         return view('products.index', compact('products'));
     }
@@ -33,12 +33,11 @@ class ProductController extends Controller
 
     public function storeProduct(Request $request)
     {
-        // dd($request->all());
         $request->validate([
             'name' => 'required|string',
             'description' => 'required|string',
             'slug' => 'required|string',
-            'category_id' => 'required|exists:categories,id',
+            'categories' => 'required|array|exists:categories,id',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'gallery' => 'nullable|array',
             'gallery.*' => 'image|mimes:jpeg,png,jpg,gif',
@@ -55,8 +54,10 @@ class ProductController extends Controller
 
             // Upload each file in the 'gallery' array to the 'uploads' folder
             $galleryPaths = [];
-            foreach ($request->file('gallery') as $galleryFile) {
-                $galleryPaths[] = $galleryFile->store('uploads', 'public');
+            if ($request->has('gallery')) {
+                foreach ($request->file('gallery') as $galleryFile) {
+                    $galleryPaths[] = $galleryFile->store('uploads', 'public');
+                }
             }
 
             // Create a new Product instance and fill it with the validated data
@@ -64,18 +65,20 @@ class ProductController extends Controller
                 'name' => $request->name,
                 'description' => $request->description,
                 'slug' => $request->slug,
-                'category_id' => $request->category_id,
-                'image' => $imagePath,
-                'gallery' => json_encode($galleryPaths),
                 'price' => $request->price,
                 'sale_price' => $request->sale_price,
-                'isNewArrival' => $request->isNewArrival == 'on' ? 'true' : 'false' ,
-                'featured' => $request->featured == 'on' ? 'true' : 'false',
-                'isOnSale' => $request->isOnSale == 'on' ? 'true' : 'false',
+                'isNewArrival' => $request->has('isNewArrival') ? 'true' : 'false',
+                'featured' => $request->has('featured') ? 'true' : 'false',
+                'isOnSale' => $request->has('isOnSale') ? 'true' : 'false',
+                'image' => $imagePath, // Set the image path here
+                'gallery' => json_encode($galleryPaths),
             ]);
 
             // Save the product to the database
             $product->save();
+
+            // Attach categories to the product
+            $product->categories()->attach($request->input('categories'));
 
             // Set success message
             session()->flash('success', 'Product added successfully');
@@ -88,6 +91,7 @@ class ProductController extends Controller
         return redirect()->route('second', ['products', 'create']);
     }
 
+
     public function showProduct($id)
     {
         $product = Product::find($id);
@@ -97,24 +101,89 @@ class ProductController extends Controller
     public function editProduct($id)
     {
         $product = Product::find($id);
-        return view('products.edit', compact('product'));
+        $categories = Category::all();
+        return view('products.edit', compact('product', 'categories'));
     }
 
     public function updateProduct(Request $request, $id)
     {
-        $product = Product::find($id);
-        $product->name = $request->name;
-        $product->price = $request->price;
+        try {
+            $product = Product::find($id);
 
-        $product->save();
+            // Validate only the fields that are present in the request
+            $request->validate([
+                'name' => 'string',
+                'description' => 'string',
+                'slug' => 'string',
+                'categories' => 'array|exists:categories,id',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+                'gallery' => 'nullable|array',
+                'gallery.*' => 'image|mimes:jpeg,png,jpg,gif',
+                'price' => 'string',
+                'sale_price' => 'string',
+                'isNewArrival' => 'nullable|in:on,off',
+                'featured' => 'nullable|in:on,off',
+                'isOnSale' => 'nullable|in:on,off',
+            ]);
 
-        return redirect()->route('products');
+            // Fill the product with the validated request data
+            $product->fill($request->only([
+                'name', 'description', 'slug', 'price', 'sale_price',
+                'isNewArrival', 'featured', 'isOnSale',
+            ]));
+
+            // Handle image update
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('uploads', 'public');
+                $product->image = $imagePath;
+            }
+
+            // Handle gallery update
+            if ($request->has('gallery')) {
+                $galleryPaths = [];
+                foreach ($request->file('gallery') as $galleryFile) {
+                    $galleryPaths[] = $galleryFile->store('uploads', 'public');
+                }
+                $product->gallery = json_encode($galleryPaths);
+            }
+
+            $product->isNewArrival = $request->has('isNewArrival') ? 'true' : 'false';
+            $product->featured = $request->has('featured') ? 'true' : 'false';
+            $product->isOnSale = $request->has('isOnSale') ? 'true' : 'false';
+
+            // Save changes
+            $product->save();
+
+            // Sync categories
+            if ($request->has('categories')) {
+                $product->categories()->sync($request->input('categories'));
+            }
+
+            // Set success message
+            session()->flash('success', 'Product updated successfully');
+        } catch (\Exception $e) {
+            // Set error message
+            session()->flash('error', 'Error updating product: ' . $e->getMessage());
+        }
+
+        // Redirect to the 'products' route
+        return redirect()->route('third', ['products', $id, 'edit']);
     }
+
+
 
     public function deleteProduct($id)
     {
-        $product = Product::find($id);
-        $product->delete();
+        // dd($id);
+        try {
+            $product = Product::find($id);
+            $product->delete();
+            session()->flash('success', 'Product deleted successfully');
+        } catch (\Exception $e) {
+            // Set error message
+            session()->flash('error', 'Error deleting product: ' . $e->getMessage());
+        }
+
 
         return redirect()->route('products');
     }

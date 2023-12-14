@@ -39,7 +39,7 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="header-title">
                             All Products <span class="badge bg-soft-success text-success ms-2">
-                                {{ $products->count() }}
+                                {{ $categories->count() }}
                             </span>
                         </h4>
                         <a href="{{ route('second', ['products', 'create']) }}" class="btn btn-sm btn-success waves-effect waves-light">
@@ -56,13 +56,9 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Sale Price</th>
-                                <th>Featured</th>
-                                <th>New Arrival</th>
-                                <th>Sale</th>
-                                <th>Categories</th>
+                                <th>Slug</th>
+                                <th>Parent</th>
+                                <th>Products Count</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -70,40 +66,31 @@
 
                         <tbody>
 
-                            @foreach ($products as $product)
+                            @foreach ($categories as $category)
                             <tr>
                                 <td>
-                                    {{ $product->id }}
+                                    {{ $category->id }}
                                 </td>
                                 <td>
-                                    {{ $product->name  }}
+                                    {{ $category->name  }}
                                 </td>
                                 <td>
-                                    {{ $product->description }}
+                                    {{ $category->slug }}
                                 </td>
                                 <td>
-                                    ${{ $product->price }}
+                                    @if ($category->parent)
+                                    <span class="badge bg-soft-success text-success">{{ $category->parent->name }}</span>
+                                    @else
+                                    <span class="badge bg-soft-danger text-danger">No Parent Category</span>
+                                    @endif
                                 </td>
                                 <td>
-                                    ${{ $product->sale_price }}
+                                    <span class="badge bg-soft-success text-success">{{ $category->products->count() }}</span>
                                 </td>
+
                                 <td>
-                                    <span class="badge {{ $product->featured == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->featured == 'true' ? 'Yes' : 'No' }}</span>
-                                </td>
-                                <td>
-                                    <span class="badge {{ $product->isNewArrival == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->isNewArrival == 'true' ? 'Yes' : 'No' }}</span>
-                                </td>
-                                <td>
-                                    <span class="badge {{ $product->isOnSale == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->isOnSale == 'true' ? 'Yes' : 'No' }}</span>
-                                </td>
-                                <td>
-                                    @foreach ($product->categories as $category)
-                                    <span class="badge bg-soft-success text-success">{{ $category->name }}</span>
-                                    @endforeach
-                                </td>
-                                <td>
-                                    <a href="{{ route('third', ['products', $product->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
-                                    <a href="{{ route('third', ['products', $product->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
+                                    <a href="{{ route('third', ['categories', $category->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
+                                    <a href="{{ route('third', ['categories', $category->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
                                         <i class="ri-delete-bin-6-fill"></i>
                                     </a>
                                 </td>

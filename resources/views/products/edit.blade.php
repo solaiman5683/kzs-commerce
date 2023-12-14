@@ -34,11 +34,13 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('any', ['index']) }}">KZS</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('second', ['products', 'index']) }}">Products</a></li>
-                        <li class="breadcrumb-item active">New Product</li>
+                        <li class="breadcrumb-item active">
+                            {{ $product->name  }}
+                        </li>
                     </ol>
                 </div>
                 <h4 class="page-title">
-                    Add New Product
+                    Edit :: {{ $product->name  }}
                 </h4>
             </div>
         </div>
@@ -53,17 +55,17 @@
                         Product Details
                     </h4>
                     <p class="text-muted fs-14">
-                        Please fill the form to add a new product. All fields are required. You can add a new product from here.
+                        Please fill the form to add a new product. All fields are . You can add a new product from here.
                     </p>
 
-                    <form action="{{ route('second', ['products', 'create']) }}" enctype="multipart/form-data" class="needs-validation" method="POST" novalidate>
+                    <form action="{{ route('third', ['products', $product->id , 'edit']) }}" enctype="multipart/form-data" class="needs-validation" method="POST" novalidate>
                         @csrf
                         <div class="row">
                             <div class="mb-2 col-lg-6">
                                 <label class="form-label" for="name">
                                     Product Name
                                 </label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="name" required>
+                                <input type="text" value="{{ old('name', $product->name) }}" class="form-control" id="name" placeholder="Enter Product Name" name="name">
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -75,7 +77,7 @@
                                 <label class="form-label" for="slug">
                                     Slug
                                 </label>
-                                <input type="text" class="form-control" id="slug" placeholder="Slug" name="slug" required>
+                                <input type="text" class="form-control" value="{{ $product->slug }}" id="slug" placeholder="Slug" name="slug">
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -89,7 +91,7 @@
                             <label class="form-label" for="description">
                                 Product Description
                             </label>
-                            <textarea class="form-control" id="description" placeholder="Enter Product Descriptiom" name="description" required></textarea>
+                            <textarea class="form-control" id="description" placeholder="Enter Product Descriptiom" name="description">{{ $product->description }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -103,7 +105,7 @@
                                 <label class="form-label" for="price">
                                     Price
                                 </label>
-                                <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="price" placeholder="Enter Price" name="price" required>
+                                <input type="text" value="{{ $product->price }}" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="price" placeholder="Enter Price" name="price">
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -115,16 +117,21 @@
                                 <label class="form-label" for="sale_price">
                                     Sell Price
                                 </label>
-                                <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="sale_price" placeholder="Enter Sale Price" name="sale_price">
+                                <input type="text" pattern="\d+(\.\d{1,2})?" value="{{ $product->sale_price }}" oninput="validateDecimal(this)" class="form-control" id="sale_price" placeholder="Enter Sale Price" name="sale_price">
                             </div>
                             <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="categories">
                                     Categories
                                 </label>
-                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="categories" name="categories[]" required>
+                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="categories" name="categories[]">
                                     {{-- {{ dd($categories) }} --}}
-                                    @foreach ($categories as $category)
+                                    {{-- @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach --}}
+                                    @foreach($categories as $category)
+                                    <option value="{{ $category->id }}" {{ in_array($category->id, $product->categories->pluck('id')->toArray()) ? 'selected' : '' }}>
+                                        {{ $category->name }}
+                                    </option>
                                     @endforeach
                                     {{-- <optgroup label="Fashion">
                                         <option value="man">Man's Fashion</option>
@@ -140,7 +147,7 @@
                                 <label class="form-label" for="image">
                                     Image
                                 </label>
-                                <input type="file" accept="image/*" class="form-control" id="image" name="image" required>
+                                <input type="file" accept="image/*" class="form-control" id="image" name="image">
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -152,7 +159,7 @@
                                 <label class="form-label" for="gallery">
                                     Gellary Images
                                 </label>
-                                <input type="file" accept="image/*" multiple class="form-control" id="gallery" name="gallery[]" required>
+                                <input type="file" accept="image/*" multiple class="form-control" id="gallery" name="gallery[]">
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -163,18 +170,19 @@
                         </div>
                         <div class="mb-2 mt-3">
                             <label class="form-label pe-4" for="featured">
-                                <input type="checkbox" id="featured" name="featured">
+                                <input type="checkbox" id="featured" name="featured" {{ $product->featured == 'true' ? 'checked' : '' }}>
                                 Is this product featured?
                             </label>
                             <label class="form-label pe-4" for="isNewArrival">
-                                <input type="checkbox" id="isNewArrival" name="isNewArrival">
+                                <input type="checkbox" id="isNewArrival" name="isNewArrival" {{ $product->isNewArrival == 'true' ? 'checked' : '' }}>
                                 Is this product new Arrival?
                             </label>
                             <label class="form-label" for="isOnSale">
-                                <input type="checkbox" id="isOnSale" name="isOnSale">
+                                <input type="checkbox" id="isOnSale" name="isOnSale" {{ $product->isOnSale == 'true' ? 'checked' : '' }}>
                                 Is this product on sale?
                             </label>
                         </div>
+
 
                         <button class="btn btn-primary" type="submit">Submit form</button>
                     </form>

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('productCount')->default(0);
-            $table->string('icon');
+            $table->string('icon')->nullable();
             $table->string('tags')->nullable();
             $table->string('image');
             $table->unsignedBigInteger('parent_id')->nullable() ;
