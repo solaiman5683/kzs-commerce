@@ -11,8 +11,22 @@ class Product extends Model
 
     protected $guarded = [];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($product) {
+            $product->sku = 'SKU_' . uniqid();
+        });
+    }
+
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function inventory()
+    {
+        return $this->hasOne(Inventory::class);
     }
 }

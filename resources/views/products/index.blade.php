@@ -56,7 +56,7 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
-                                <th>Description</th>
+                                <th>Quantity</th>
                                 <th>Price</th>
                                 <th>Sale Price</th>
                                 <th>Featured</th>
@@ -79,7 +79,11 @@
                                     {{ $product->name  }}
                                 </td>
                                 <td>
-                                    {{ $product->description }}
+                                    @if($product->inventory)
+                                    {{ $product->inventory->quantity }}
+                                    @else
+                                    0
+                                    @endif
                                 </td>
                                 <td>
                                     ${{ $product->price }}

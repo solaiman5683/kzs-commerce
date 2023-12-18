@@ -1460,7 +1460,7 @@
                             <script>
                                 document.write(new Date().getFullYear())
 
-                            </script> © KZS - Coderthemes.com
+                            </script> © KZS - iciclecorporation.com
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-end footer-links d-none d-md-block">

@@ -1,1 +1,14 @@
-{"version":3,"file":"demo.tasks-45567f31.js","sources":["../../../resources/js/pages/demo.tasks.js"],"sourcesContent":["/*\nTemplate Name: KZS - Admin Panel\nAuthor: CoderThemes\nWebsite: https://coderthemes.com/\nContact: support@coderthemes.com\nFile: Quilljs init js\n*/\n\nimport Quill from 'quill/dist/quill.min.js';\n\n// Bubble theme\nvar quill = new Quill('#bubble-editor', {\n  theme: 'bubble'\n});\n"],"names":["Quill"],"mappings":"mFAWY,IAAIA,EAAM,iBAAkB,CACtC,MAAO,QACT,CAAC"}
+{
+    "version": 3,
+    "file": "demo.tasks-45567f31.js",
+    "sources": [
+        "../../../resources/js/pages/demo.tasks.js"
+    ],
+    "sourcesContent": [
+        "/*\nTemplate Name: KZS - Admin Panel\nAuthor: CoderThemes\nWebsite: https://iciclecorporation.com/\nContact: support@iciclecorporation.com\nFile: Quilljs init js\n*/\n\nimport Quill from 'quill/dist/quill.min.js';\n\n// Bubble theme\nvar quill = new Quill('#bubble-editor', {\n  theme: 'bubble'\n});\n"
+    ],
+    "names": [
+        "Quill"
+    ],
+    "mappings": "mFAWY,IAAIA,EAAM,iBAAkB,CACtC,MAAO,QACT,CAAC"
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Inventory;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -13,13 +14,13 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        dd($products);
+        // dd($products);
         return view('product');
     }
 
     public function products()
     {
-        $products = Product::with('categories')->get();
+        $products = Product::with('categories', 'inventory')->get();
         // dd($products);
         return view('products.index', compact('products'));
     }
@@ -46,6 +47,7 @@ class ProductController extends Controller
             'isNewArrival' => 'nullable|in:on,off',
             'featured' => 'nullable|in:on,off',
             'isOnSale' => 'nullable|in:on,off',
+            'quantity' => 'required|integer|min:0',
         ]);
 
         try {
@@ -76,6 +78,16 @@ class ProductController extends Controller
 
             // Save the product to the database
             $product->save();
+
+            // Create a new Inventory instance and fill it with the product information
+            $inventory = new Inventory([
+                'product_id' => $product->id,
+                'quantity' => $request->quantity, // You can set an initial quantity if needed
+                // ... (other inventory fields)
+            ]);
+
+            // Save the inventory record to the database
+            $inventory->save();
 
             // Attach categories to the product
             $product->categories()->attach($request->input('categories'));

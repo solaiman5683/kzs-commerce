@@ -1,1 +1,14 @@
-{"version":3,"file":"demo.quilljs-9ecad5a5.js","sources":["../../../resources/js/pages/demo.quilljs.js"],"sourcesContent":["/*\nTemplate Name: KZS - Admin Panel\nAuthor: CoderThemes\nWebsite: https://coderthemes.com/\nContact: support@coderthemes.com\nFile: Quilljs init js\n*/\n\nimport Quill from 'quill/dist/quill.min.js';\n\n// Snow theme\nvar quill = new Quill('#snow-editor', {\n  theme: 'snow',\n  modules: {\n    'toolbar': [[{ 'font': [] }, { 'size': [] }], ['bold', 'italic', 'underline', 'strike'], [{ 'color': [] }, { 'background': [] }], [{ 'script': 'super' }, { 'script': 'sub' }], [{ 'header': [false, 1, 2, 3, 4, 5, 6] }, 'blockquote', 'code-block'], [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }], ['direction', { 'align': [] }], ['link', 'image', 'video'], ['clean']]\n  },\n});\n\n// Bubble theme\nvar quill = new Quill('#bubble-editor', {\n  theme: 'bubble'\n});\n"],"names":["Quill"],"mappings":"mFAWY,IAAIA,EAAM,eAAgB,CACpC,MAAO,OACP,QAAS,CACP,QAAW,CAAC,CAAC,CAAE,KAAQ,CAAA,CAAI,EAAE,CAAE,KAAQ,CAAA,CAAI,CAAA,EAAG,CAAC,OAAQ,SAAU,YAAa,QAAQ,EAAG,CAAC,CAAE,MAAS,CAAE,CAAA,EAAI,CAAE,WAAc,CAAE,CAAA,CAAE,EAAG,CAAC,CAAE,OAAU,OAAO,EAAI,CAAE,OAAU,KAAK,CAAE,EAAG,CAAC,CAAE,OAAU,CAAC,GAAO,EAAG,EAAG,EAAG,EAAG,EAAG,CAAC,CAAG,EAAE,aAAc,YAAY,EAAG,CAAC,CAAE,KAAQ,SAAW,EAAE,CAAE,KAAQ,QAAU,EAAE,CAAE,OAAU,IAAI,EAAI,CAAE,OAAU,IAAI,CAAE,EAAG,CAAC,YAAa,CAAE,MAAS,CAAE,CAAA,CAAE,EAAG,CAAC,OAAQ,QAAS,OAAO,EAAG,CAAC,OAAO,CAAC,CACpZ,CACH,CAAC,EAGW,IAAIA,EAAM,iBAAkB,CACtC,MAAO,QACT,CAAC"}
+{
+    "version": 3,
+    "file": "demo.quilljs-9ecad5a5.js",
+    "sources": [
+        "../../../resources/js/pages/demo.quilljs.js"
+    ],
+    "sourcesContent": [
+        "/*\nTemplate Name: KZS - Admin Panel\nAuthor: CoderThemes\nWebsite: https://iciclecorporation.com/\nContact: support@iciclecorporation.com\nFile: Quilljs init js\n*/\n\nimport Quill from 'quill/dist/quill.min.js';\n\n// Snow theme\nvar quill = new Quill('#snow-editor', {\n  theme: 'snow',\n  modules: {\n    'toolbar': [[{ 'font': [] }, { 'size': [] }], ['bold', 'italic', 'underline', 'strike'], [{ 'color': [] }, { 'background': [] }], [{ 'script': 'super' }, { 'script': 'sub' }], [{ 'header': [false, 1, 2, 3, 4, 5, 6] }, 'blockquote', 'code-block'], [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }], ['direction', { 'align': [] }], ['link', 'image', 'video'], ['clean']]\n  },\n});\n\n// Bubble theme\nvar quill = new Quill('#bubble-editor', {\n  theme: 'bubble'\n});\n"
+    ],
+    "names": [
+        "Quill"
+    ],
+    "mappings": "mFAWY,IAAIA,EAAM,eAAgB,CACpC,MAAO,OACP,QAAS,CACP,QAAW,CAAC,CAAC,CAAE,KAAQ,CAAA,CAAI,EAAE,CAAE,KAAQ,CAAA,CAAI,CAAA,EAAG,CAAC,OAAQ,SAAU,YAAa,QAAQ,EAAG,CAAC,CAAE,MAAS,CAAE,CAAA,EAAI,CAAE,WAAc,CAAE,CAAA,CAAE,EAAG,CAAC,CAAE,OAAU,OAAO,EAAI,CAAE,OAAU,KAAK,CAAE,EAAG,CAAC,CAAE,OAAU,CAAC,GAAO,EAAG,EAAG,EAAG,EAAG,EAAG,CAAC,CAAG,EAAE,aAAc,YAAY,EAAG,CAAC,CAAE,KAAQ,SAAW,EAAE,CAAE,KAAQ,QAAU,EAAE,CAAE,OAAU,IAAI,EAAI,CAAE,OAAU,IAAI,CAAE,EAAG,CAAC,YAAa,CAAE,MAAS,CAAE,CAAA,CAAE,EAAG,CAAC,OAAQ,QAAS,OAAO,EAAG,CAAC,OAAO,CAAC,CACpZ,CACH,CAAC,EAGW,IAAIA,EAAM,iBAAkB,CACtC,MAAO,QACT,CAAC"
+}

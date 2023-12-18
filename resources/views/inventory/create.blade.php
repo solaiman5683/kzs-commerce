@@ -33,12 +33,12 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('any', ['index']) }}">KZS</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('second', ['products', 'index']) }}">Products</a></li>
-                        <li class="breadcrumb-item active">New Product</li>
+                        <li class="breadcrumb-item"><a href="{{ route('second', ['products', 'index']) }}">Inventory</a></li>
+                        <li class="breadcrumb-item active">New Inventory</li>
                     </ol>
                 </div>
                 <h4 class="page-title">
-                    Add New Product
+                    Add Product Inventory
                 </h4>
             </div>
         </div>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="mb-2 col-lg-3">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="price">
                                     Price
                                 </label>
@@ -111,19 +111,13 @@
                                     Please provide a valid Price for the product.
                                 </div>
                             </div>
-                            <div class="mb-2 col-lg-3">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="sale_price">
                                     Sell Price
                                 </label>
                                 <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="sale_price" placeholder="Enter Sale Price" name="sale_price">
                             </div>
-                            <div class="mb-2 col-lg-3">
-                                <label class="form-label" for="quantity">
-                                    Quantity
-                                </label>
-                                <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="quantity" placeholder="Enter Quantity" value='1' name="quantity">
-                            </div>
-                            <div class="mb-2 col-lg-3">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="categories">
                                     Categories
                                 </label>

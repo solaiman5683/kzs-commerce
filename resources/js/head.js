@@ -32,7 +32,7 @@ window.moment = moment;
         },
 
         menu: {
-            color: "dark",
+            color: "light",
         },
 
         // This option for only vertical (left Sidebar) layout

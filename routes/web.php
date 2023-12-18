@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
@@ -53,6 +54,19 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::get('{id}/edit', [CategoryController::class, 'editCategory'])->name('editCategory');
         Route::post('{id}/edit', [CategoryController::class, 'updateCategory'])->name('updateCategory');
         Route::get('{id}/delete', [CategoryController::class, 'deleteCategory'])->name('deleteCategory');
+    });
+
+    // Inventory routes
+    Route::group(['prefix' => 'inventory'], function () {
+        // redirect / to /products/index
+        Route::get('', fn()=>redirect()->route('inventory'))->name('inventoryRoot');
+        Route::get('index', [InventoryController::class, 'inventory'])->name('inventory');
+        Route::get('create', [InventoryController::class, 'createInventory'])->name('createInventory');
+        Route::post('create', [InventoryController::class, 'storeInventory'])->name('storeInventory');
+        Route::get('{id}', [InventoryController::class, 'showInventory'])->name('showInventory');
+        Route::get('{id}/edit', [InventoryController::class, 'editInventory'])->name('editInventory');
+        Route::post('{id}/edit', [InventoryController::class, 'updateInventory'])->name('updateInventory');
+        Route::get('{id}/delete', [InventoryController::class, 'deleteInventory'])->name('deleteInventory');
     });
 
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');

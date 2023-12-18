@@ -1,8 +1,8 @@
 /*
 Template Name: KZS - Admin Panel
 Author: CoderThemes
-Website: https://coderthemes.com/
-Contact: support@coderthemes.com
+Website: https://iciclecorporation.com/
+Contact: support@iciclecorporation.com
 File: Quilljs init js
 */
 

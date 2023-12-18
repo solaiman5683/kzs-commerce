@@ -219,7 +219,7 @@
             <script>
                 document.write(new Date().getFullYear())
 
-            </script> © KZS - Coderthemes.com
+            </script> © KZS - iciclecorporation.com
         </span>
     </footer>
 

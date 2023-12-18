@@ -37,13 +37,20 @@
         <div class="leftbar-user">
             <a href="{{ route('second', ['pages', 'profile']) }}">
                 <img src="/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                <span class="leftbar-user-name mt-2">Tosha Minner</span>
+                <span class="leftbar-user-name mt-2">
+                    {{ auth()->user()->name }}
+                </span>
             </a>
         </div>
 
         <!--- Sidemenu -->
         <ul class="side-nav">
 
+            {{-- <li class="side-nav-title">
+                <h5>
+                    {{ auth()->user()->name }}
+                </h5>
+            </li> --}}
             <li class="side-nav-title">Navigation</li>
 
             <li class="side-nav-item">
@@ -57,9 +64,7 @@
             <li class="side-nav-title">Apps</li>
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarProducts" aria-expanded="false" aria-controls="sidebarProducts" class="side-nav-link">
-                    <i
-                        class="ri-shopping-cart-line"
-                    ></i>
+                    <i class="ri-shopping-cart-line"></i>
                     <span> Products </span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -71,18 +76,19 @@
                         <li>
                             <a href="{{ route('second', ['products', 'create']) }}">Add New Product</a>
                         </li>
+                        <li>
+                            <a href="{{ route('second', ['inventory', 'index']) }}">Inventory</a>
+                        </li>
                     </ul>
                 </div>
             </li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarProducts" aria-expanded="false" aria-controls="sidebarProducts" class="side-nav-link">
-                    <i
-                        class="ri-links-fill"
-                    ></i>
+                <a data-bs-toggle="collapse" href="#sidebarCategories" aria-expanded="false" aria-controls="sidebarCategories" class="side-nav-link">
+                    <i class="ri-links-fill"></i>
                     <span> Categories </span>
                     <span class="menu-arrow"></span>
                 </a>
-                <div class="collapse" id="sidebarProducts">
+                <div class="collapse" id="sidebarCategories">
                     <ul class="side-nav-second-level">
                         <li>
                             <a href="{{ route('second', ['categories', 'index']) }}">All Categories</a>

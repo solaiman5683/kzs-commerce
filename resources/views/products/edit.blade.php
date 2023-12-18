@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['page_title' => 'Add New Product', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+@extends('layouts.vertical', ['page_title' => 'Edit '.$product->name, 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('css')
 @vite(['node_modules/select2/dist/css/select2.min.css'])
