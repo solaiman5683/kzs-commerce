@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['page_title' => 'Categories', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+@extends('layouts.vertical', ['page_title' => 'Customers', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('css')
 @vite([
@@ -39,16 +39,16 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="header-title">
                             All Products <span class="badge bg-soft-success text-success ms-2">
-                                {{ $categories->count() }}
+                                {{ $customers->count() }}
                             </span>
                         </h4>
-                        <a href="{{ route('second', ['products', 'create']) }}" class="btn btn-sm btn-success waves-effect waves-light">
+                        <a href="{{ route('second', ['customers', 'create']) }}" class="btn btn-sm btn-success waves-effect waves-light">
                             <i class="ri-add-fill me-1 align-middle"></i>
-                            Add New Product
+                            Add New Customer
                         </a>
                     </div>
                     <p class="text-muted fs-14">
-                        All products list in the system. You can add, edit or delete a product from here.
+                        All the customers are listed here. You can add, edit or delete customers from here.
                     </p>
 
                     <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
@@ -56,9 +56,9 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
-                                <th>Slug</th>
-                                <th>Parent</th>
-                                <th>Products Count</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Alternate Phone</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -66,31 +66,16 @@
 
                         <tbody>
 
-                            @foreach ($categories as $category)
+                            @foreach ($customers as $customer)
                             <tr>
+                                <td>{{ $customer->id }}</td>
+                                <td>{{ $customer->user->name }}</td>
+                                <td>{{ $customer->user->email }}</td>
+                                <td>{{ $customer->phone }}</td>
+                                <td>{{ $customer->alternate_phone }}</td>
                                 <td>
-                                    {{ $category->id }}
-                                </td>
-                                <td>
-                                    {{ $category->name  }}
-                                </td>
-                                <td>
-                                    {{ $category->slug }}
-                                </td>
-                                <td>
-                                    @if ($category->parent)
-                                    <span class="badge bg-soft-success text-success">{{ $category->parent->name }}</span>
-                                    @else
-                                    <span class="badge bg-soft-danger text-danger">No Parent Category</span>
-                                    @endif
-                                </td>
-                                <td>
-                                    <span class="badge bg-soft-success text-success">{{ $category->products->count() }}</span>
-                                </td>
-
-                                <td>
-                                    <a href="{{ route('third', ['categories', $category->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
-                                    <a href="{{ route('third', ['categories', $category->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
+                                    <a href="{{ route('third', ['products', $customer->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
+                                    <a href="{{ route('third', ['products', $customer->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
                                         <i class="ri-delete-bin-6-fill"></i>
                                     </a>
                                 </td>

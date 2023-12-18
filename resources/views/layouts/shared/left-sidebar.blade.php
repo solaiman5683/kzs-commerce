@@ -100,6 +100,46 @@
                 </div>
             </li>
 
+            <li class="side-nav-title">Orders</li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarCustomers" aria-expanded="false" aria-controls="sidebarCustomers" class="side-nav-link">
+                    <i class="ri-user-smile-line"></i>
+                    <span> Customers </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarCustomers">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{ route('second', ['customers', 'index']) }}">All Customers</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('second', ['customers', 'create']) }}">Add New Customer</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarOrders" aria-expanded="false" aria-controls="sidebarOrders" class="side-nav-link">
+                    <i class="ri-list-check-3"></i>
+                    <span> Orders </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarOrders">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{ route('second', ['orders', 'index']) }}">All Orders</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('second', ['orders', 'create']) }}">New Order</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <a href="{{ route('second', ['pages', 'invoice']) }}" class="side-nav-link">
+                <i class="ri-pages-line "></i>
+                <span> Invoice </span>
+            </a>
+
             {{-- <li class="side-nav-item">
                 <a href="{{ route('second', ['apps', 'calendar']) }}" class="side-nav-link">
             <i class="ri-calendar-event-line"></i>

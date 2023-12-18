@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -67,6 +68,19 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::get('{id}/edit', [InventoryController::class, 'editInventory'])->name('editInventory');
         Route::post('{id}/edit', [InventoryController::class, 'updateInventory'])->name('updateInventory');
         Route::get('{id}/delete', [InventoryController::class, 'deleteInventory'])->name('deleteInventory');
+    });
+
+    // Customers routes
+    Route::group(['prefix' => 'customers'], function () {
+        // redirect / to /products/index
+        Route::get('', fn()=>redirect()->route('customers'))->name('customersRoot');
+        Route::get('index', [CustomerController::class, 'index'])->name('index');
+        Route::get('create', [CustomerController::class, 'createCustomer'])->name('createCustomer');
+        Route::post('create', [CustomerController::class, 'storeCustomer'])->name('storeCustomer');
+        Route::get('{id}', [CustomerController::class, 'showCustomer'])->name('showCustomer');
+        Route::get('{id}/edit', [CustomerController::class, 'editCustomer'])->name('editCustomer');
+        Route::post('{id}/edit', [CustomerController::class, 'updateCustomer'])->name('updateCustomer');
+        Route::get('{id}/delete', [CustomerController::class, 'deleteCustomer'])->name('deleteCustomer');
     });
 
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');
