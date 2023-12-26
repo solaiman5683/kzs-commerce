@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['page_title' => 'Products', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+@extends('layouts.vertical', ['page_title' => 'Orders', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('css')
 @vite([
@@ -38,13 +38,13 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <h4 class="header-title">
-                            All Products <span class="badge bg-soft-success text-success ms-2">
-                                {{ $products->count() }}
+                            All Orders <span class="badge bg-soft-success text-success ms-2">
+                                {{ $orders->count() }}
                             </span>
                         </h4>
-                        <a href="{{ route('second', ['products', 'create']) }}" class="btn btn-sm btn-success waves-effect waves-light">
+                        <a href="{{ route('second', ['orders', 'create']) }}" class="btn btn-sm btn-success waves-effect waves-light">
                             <i class="ri-add-fill me-1 align-middle"></i>
-                            Add New Product
+                            Place New Order
                         </a>
                     </div>
                     <p class="text-muted fs-14">
@@ -55,22 +55,61 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
+                                <th>Product Name</th>
+                                <th>Customer Name</th>
                                 <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Sale Price</th>
-                                <th>Featured</th>
-                                <th>New Arrival</th>
-                                <th>Sale</th>
-                                <th>Categories</th>
+                                <th>Total Price</th>
+                                <th>Status</th>
+                                <th>Payment Status</th>
+                                <th>
+                                    Transaction Id
+                                </th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
 
 
                         <tbody>
+                            @foreach ($orders as $order)
+                                <tr>
+                                    <td>
+                                        {{ $order->id }}
+                                    </td>
+                                    <td>
+                                        @foreach ($order->products as $product)
+                                            {{ $product->name }} ({{ $product->pivot->quantity }}) <br>
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        {{ $order->customer->user->name }}
+                                    </td>
+                                    <td>
+                                        {{ $order->products->sum('pivot.quantity') }}
+                                    </td>
+                                    <td>
+                                        ${{ $order->total_price }}
+                                    </td>
+                                    <td>
+                                        <span class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</span>
+                                    </td>
+                                    <td>
+                                        {{ $order->transaction_id ? $order->transaction_id : 'N/A' }}
+                                    </td>
+                                    <td>
+                                        {{-- button for make paid --}}
+                                        @if ($order->payment_status == 'unpaid')
+                                            <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
+                                                <i class="ri-money-dollar-circle-fill"></i>
+                                            </a>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
 
-                            @foreach ($products as $product)
+                            {{-- @foreach ($products as $product)
                             <tr>
                                 <td>
                                     {{ $product->id }}
@@ -112,7 +151,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            @endforeach
+                            @endforeach --}}
                         </tbody>
                     </table>
 

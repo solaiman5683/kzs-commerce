@@ -8,7 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = ['order_total', 'status']; // Add other fillable columns as needed
+    protected $fillable = [
+        'customer_id',
+        'order_total',
+        'status',
+        'payment_status',
+        'payment_method',
+        'trxID',
+        'currency',
+    ];
 
     public function customer()
     {

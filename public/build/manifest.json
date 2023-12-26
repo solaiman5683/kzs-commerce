@@ -486,7 +486,7 @@
     "src": "resources/js/app.js"
   },
   "resources/js/head.js": {
-    "file": "assets/head-c5b50a79.js",
+    "file": "assets/head-398a8c15.js",
     "imports": [
       "_jquery-1242cc52.js",
       "_moment-e9e012b5.js",

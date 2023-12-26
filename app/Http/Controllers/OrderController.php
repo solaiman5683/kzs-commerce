@@ -4,16 +4,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Product;
 
 class OrderController extends Controller
 {
     public function index()
     {
         // Retrieve all orders
-        $orders = Order::all();
-
+        $orders = Order::with('customer.user','products')->get();
+        // dd($orders);
         return view('orders.index', ['orders' => $orders]);
     }
 
@@ -25,26 +27,60 @@ class OrderController extends Controller
         return view('orders.show', ['order' => $order]);
     }
 
-    public function create()
+    public function createOrder()
     {
-        // Show the form to create a new order
-        return view('orders.create');
+        $products = Product::all();
+        $customers = Customer::with('user')->get();
+        // dd($customers);
+        return view('orders.create', compact('products', 'customers'));
     }
 
-    public function store(Request $request)
+    public function storeOrder(Request $request)
     {
-        // Validate and store a new order
-        $request->validate([
-            // Add validation rules for order creation fields
-            'order_total' => 'required|numeric',
-            'status' => 'required|string',
-            'payment_status' => 'required|string',
-            'customer_id' => 'required|exists:customers,id',
-        ]);
+        // dd($request->all());
+        try {
+            $request->validate([
+                'customer_id' => 'required|exists:customers,id',
+                'products.*' => 'required|exists:products,id',
+                'quantities.*' => 'required|integer|min:1',
+                'total' => 'required|numeric|min:0',
+            ]);
 
-        $order = Order::create($request->all());
+            // Create a new order with the customer_id and total
+            $order = new Order([
+                'customer_id' => $request->input('customer_id'),
+                'order_total' => $request->input('total'),
+                // Add other order-related fields if needed
+            ]);
+            $order->save();
 
-        return redirect()->route('orders.show', ['order' => $order->id]);
+            // Attach products to the order with quantities
+            foreach ($request->input('products') as $key => $productId) {
+                $quantity = $request->input('quantities.' . $productId);
+                // dd($quantity);
+
+                // Ensure that the 'quantity' value is not null or empty
+                if ($quantity !== null && $quantity !== '') {
+                    $product = Product::findOrFail($productId);
+                    $price = $product->sale_price ? $product->sale_price : $product->price;
+
+                    $order->products()->attach($productId, [
+                        'quantity' => $quantity,
+                        'price' => $price,
+                    ]);
+                }
+            }
+
+            session()->flash('success', 'Order created successfully.');
+        } catch (\Exception $e) {
+            // Log the exception message for debugging
+            dd($e->getMessage());
+
+            session()->flash('error', 'Order creation failed.');
+        }
+
+        // Redirect or respond accordingly
+        return redirect()->route('second', ['orders', 'create']);
     }
 
     public function edit($id)
