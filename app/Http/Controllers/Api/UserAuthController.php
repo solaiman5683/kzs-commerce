@@ -13,23 +13,6 @@ class UserAuthController extends Controller
 {
     public function userRegister()
     {
-        // $validator = Validator::make(request()->all(), [
-        //     'name' => 'required',
-        //     'email' => 'required|email|unique:users,email',
-            
-        //     'password' => [
-        //         'required',
-        //         'string',
-        //         'min:8',
-        //     ],
-        // ]);
-        // if ($validator->fails()) {
-        //     return response()->json([
-        //         'status' => 'error',
-        //         'errors' => $validator->errors()
-        //     ], 422);
-        // }
-        
             User::create([
             'name' => request('name'),
             'email' => request('email'),
