@@ -13,51 +13,87 @@ class UserAuthController extends Controller
 {
     public function userRegister()
     {
-            User::create([
+        // Create a new user
+        $userInfo = User::create([
             'name' => request('name'),
             'email' => request('email'),
-            
             'password' => bcrypt(request('password')),
-            
         ]);
-        
+
+        if (!$userInfo) {
+            // Handle user creation failure
+            return $this->errorResponse('User registration failed.', 400);
+        }
+
+        // Attempt to log in the user and generate a token
+        try {
+            $token = auth('jwt')->attempt(request()->only('email', 'password'));
+
+            if (!$token) {
+                return $this->errorResponse('Invalid credentials', 401);
+            }
+        } catch (JWTException $e) {
+            return $this->errorResponse('Could not create token', 500);
+        }
+
+        // Retrieve user information
+        $user = auth('jwt')->user();
+        $userData = User::select('id', 'name', 'email')->find($user->id);
+
+        if (!$userData) {
+            return $this->errorResponse('User data not found', 500);
+        }
+
+        // Set token to never expire
+        $cookie = cookie('jwt', $token, null);
+
+        // Return a success response
         return response()->json([
             'status' => 'ok',
-            'message' => 'User CReated'
-        ]);
+            'success' => true,
+            'message' => 'User created and logged in successfully.',
+            'token' => $token,
+            'user' => $userData,
+        ])->withCookie($cookie);
     }
-    //userLogin
+
+    private function errorResponse($message, $statusCode)
+    {
+        return response()->json([
+            'status' => 'error',
+            'code' => $statusCode,
+            'success' => false,
+            'message' => $message,
+        ], $statusCode);
+    }
+    //User Login
     public function userLogin()
     {
         $credentials = request()->only('email', 'password');
+
         try {
-            if (!$token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 400);
+            if (!$token = auth('jwt')->attempt($credentials)) {
+                return response()->json(['error' => 'Invalid credentials'], 401);
             }
         } catch (JWTException $e) {
-            return response()->json(['error' => 'could_not_create_token'], 500);
+            return response()->json(['error' => 'Could not create token'], 500);
         }
-        $user = JWTAuth::user();
 
-        // if ($user) {
-        //     if ($user->status === 'pending') {
-        //         return response()->json(['error' => 'User is pending approval.'], 403);
-        //     }
+        $user = auth('jwt')->user();
 
+        if ($user) {
             $userData = User::select('id', 'name', 'email')->find($user->id);
 
-
             if ($userData) {
-
-                $cookie = cookie('jwt', $token, 60 * 24);
+                $cookie = cookie('jwt', $token, null); // Set token to never expire
                 return response()->json([
                     'status' => 'ok',
                     'token' => $token,
                     'user' => $userData,
-
                 ])->withCookie($cookie);
-            } else {
-                return response()->json(['error' => 'User not found or has missing columns.'], 404);
             }
+        }
+
+        return response()->json(['error' => 'Invalid email or password. Please try again.'], 401);
     }
 }
