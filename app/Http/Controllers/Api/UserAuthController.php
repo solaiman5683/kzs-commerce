@@ -93,7 +93,8 @@ class UserAuthController extends Controller
 
         $user = auth('jwt')->user();
 
-        $userDataWithCustomer = User::with('customer')->find($user->id);
+        // $userDataWithCustomer = User::with('customer')->find($user->id);
+        $userDataWithCustomer = User::find($user->id)->with('customer')->first();
 
         if ($userDataWithCustomer) {
             $userData = [
