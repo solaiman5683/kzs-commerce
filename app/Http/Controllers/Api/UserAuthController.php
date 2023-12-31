@@ -93,8 +93,10 @@ class UserAuthController extends Controller
 
         $user = auth('jwt')->user();
 
-        // $userDataWithCustomer = User::with('customer')->find($user->id);
-        $userDataWithCustomer = User::find($user->id)->with('customer')->first();
+
+        $userDataWithCustomer = User::with('customer')->find($user->id);
+        // $userDataWithCustomer = User::find($user->id)->with('customer')->first();
+        // return $userDataWithCustomer;
 
         if ($userDataWithCustomer) {
             $userData = [
@@ -116,7 +118,7 @@ class UserAuthController extends Controller
             return response()->json([
                 'status' => 'ok',
                 'success' => true,
-                'message' => 'User created and logged in successfully.',
+                'message' => 'User logged in successfully.',
                 'token' => $token,
                 'user' => $userData,
             ])->withCookie($cookie);

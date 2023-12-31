@@ -109,16 +109,19 @@ class OrderApiController extends Controller
         try {
             $user = JWTAuth::user();
             $customerOrder = []; // Initialize the variable outside the conditions
-
             if ($user) {
-                $userData = User::select('id')->find($user->id);
+                $customerData = Customer::where('user_id', $user->id)->first();
+                $orders = Order::with('products')->where('customer_id', $customerData->id)->get();
+                // return $orders;
 
-                $order = Order::where('customer_id', $userData->id)->first();
-
-                if ($order) {
-                    $customerId = $order->customer_id;
-                    $customerOrder = Order::where('customer_id', $customerId)->get();
+                if ($orders) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Orders retrieved successfully.',
+                        'orders' => $orders,
+                    ], 200);
                 }
+
             }
         } catch (\Exception $e) {
             return $e;
