@@ -50,110 +50,73 @@
                     <p class="text-muted fs-14">
                         All products list in the system. You can add, edit or delete a product from here.
                     </p>
-
-                    <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Product Name</th>
-                                <th>Customer Name</th>
-                                <th>Quantity</th>
-                                <th>Total Price</th>
-                                <th>Status</th>
-                                <th>Payment Status</th>
-                                <th>
-                                    Transaction Id
-                                </th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-
-
-                        <tbody>
-                            @foreach ($orders as $order)
+                    <div class="table-responsive pb-4">
+                        <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
+                            <thead>
                                 <tr>
-                                    <td>
-                                        {{ $order->id }}
-                                    </td>
-                                    <td>
-                                        @foreach ($order->products as $product)
-                                            {{ $product->name }} ({{ $product->pivot->quantity }}) <br>
-                                        @endforeach
-                                    </td>
-                                    <td>
-                                        {{ $order->customer->user->name }}
-                                    </td>
-                                    <td>
-                                        {{ $order->products->sum('pivot.quantity') }}
-                                    </td>
-                                    <td>
-                                        ${{ $order->total_price }}
-                                    </td>
-                                    <td>
-                                        <span class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</span>
-                                    </td>
-                                    <td>
-                                        <span class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</span>
-                                    </td>
-                                    <td>
-                                        {{ $order->transaction_id ? $order->transaction_id : 'N/A' }}
-                                    </td>
-                                    <td>
-                                        {{-- button for make paid --}}
-                                        @if ($order->payment_status == 'unpaid')
-                                            <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
-                                                <i class="ri-money-dollar-circle-fill"></i>
-                                            </a>
-                                        @endif
-                                    </td>
+                                    <th>Id</th>
+                                    <th>Product Name</th>
+                                    <th>Customer Name</th>
+                                    <th>Quantity</th>
+                                    <th>Total Price</th>
+                                    <th>Status</th>
+                                    <th>Payment Status</th>
+                                    <th>Payment Method</th>
+                                    <th>
+                                        Transaction Id
+                                    </th>
+                                    <th>Actions</th>
                                 </tr>
-                            @endforeach
+                            </thead>
 
-                            {{-- @foreach ($products as $product)
-                            <tr>
-                                <td>
-                                    {{ $product->id }}
-                                </td>
-                                <td>
-                                    {{ $product->name  }}
-                                </td>
-                                <td>
-                                    @if($product->inventory)
-                                    {{ $product->inventory->quantity }}
-                                    @else
-                                    0
-                                    @endif
-                                </td>
-                                <td>
-                                    ${{ $product->price }}
-                                </td>
-                                <td>
-                                    ${{ $product->sale_price }}
-                                </td>
-                                <td>
-                                    <span class="badge {{ $product->featured == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->featured == 'true' ? 'Yes' : 'No' }}</span>
-                                </td>
-                                <td>
-                                    <span class="badge {{ $product->isNewArrival == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->isNewArrival == 'true' ? 'Yes' : 'No' }}</span>
-                                </td>
-                                <td>
-                                    <span class="badge {{ $product->isOnSale == 'true' ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $product->isOnSale == 'true' ? 'Yes' : 'No' }}</span>
-                                </td>
-                                <td>
-                                    @foreach ($product->categories as $category)
-                                    <span class="badge bg-soft-success text-success">{{ $category->name }}</span>
-                                    @endforeach
-                                </td>
-                                <td>
-                                    <a href="{{ route('third', ['products', $product->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
-                                    <a href="{{ route('third', ['products', $product->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
-                                        <i class="ri-delete-bin-6-fill"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            @endforeach --}}
-                        </tbody>
-                    </table>
+
+                            <tbody>
+                                @foreach ($orders as $order)
+                                    <tr>
+                                        <td>
+                                            {{ $order->id }}
+                                        </td>
+                                        <td>
+                                            @foreach ($order->products as $product)
+                                                {{ $product->name }} ({{ $product->pivot->quantity }}) <br>
+                                            @endforeach
+                                        </td>
+                                        <td>
+                                            {{ $order->customer->user->name }}
+                                        </td>
+                                        <td>
+                                            {{ $order->products->sum('pivot.quantity') }}
+                                        </td>
+                                        <td>
+                                            ${{ $order->order_total }}
+                                        </td>
+                                        <td>
+                                            <span class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</span>
+                                        </td>
+
+                                        <td>
+                                            <span class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</span>
+                                        </td>
+                                        <td>
+                                            {{ $order->payment_method ?? 'N/A'  }}
+                                        </td>
+                                        <td>
+                                            {{ $order->transaction_id ? $order->transaction_id : 'N/A' }}
+                                        </td>
+                                        <td>
+                                            {{-- button for make paid --}}
+                                            @if ($order->payment_status == 'unpaid')
+                                                <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
+                                                    <i class="ri-money-dollar-circle-fill"></i>
+                                                </a>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->

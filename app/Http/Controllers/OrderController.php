@@ -37,7 +37,6 @@ class OrderController extends Controller
 
     public function storeOrder(Request $request)
     {
-        // dd($request->all());
         try {
             $request->validate([
                 'customer_id' => 'required|exists:customers,id',
