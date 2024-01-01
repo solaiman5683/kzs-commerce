@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderPlaced;
 use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class OrderApiController extends Controller
@@ -60,6 +62,11 @@ class OrderApiController extends Controller
                     ]);
                 }
             }
+
+            // $user = JWTAuth::user()->id;
+
+            // Mail::to(request('user_email'))->send(new OrderPlaced(['user' => $user]));
+
 
             return response()->json([
                 'status' => 'ok',
