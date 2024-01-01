@@ -38,23 +38,35 @@ class UserAuthController extends Controller
 
         // Retrieve user information
         $user = auth('jwt')->user();
-        $userData = User::select('id', 'name', 'email')->find($user->id);
+        $userDataWithCustomer = User::with('customer')->find($user->id);
+        if ($userDataWithCustomer) {
+            $userData = [
+                'id' => $userDataWithCustomer->id,
+                'name' => $userDataWithCustomer->name,
+                'email' => $userDataWithCustomer->email,
+                'customer' => $userDataWithCustomer->customer ? $userDataWithCustomer->customer : null,
+            ];
 
-        if (!$userData) {
-            return $this->errorResponse('User data not found', 500);
+
+            if (!$userData) {
+                return $this->errorResponse('User data not found', 500);
+            }
+
+            // Set token to never expire
+            $cookie = cookie('jwt', $token, null);
+
+            // Return a success response
+            return response()->json([
+                'status' => 'ok',
+                'success' => true,
+                'message' => 'User created and logged in successfully.',
+                'token' => $token,
+                'user' => $userData,
+            ])->withCookie($cookie);
+        } else {
+            // Handle user not found
+            return response()->json(['error' => 'User not found'], 404);
         }
-
-        // Set token to never expire
-        $cookie = cookie('jwt', $token, null);
-
-        // Return a success response
-        return response()->json([
-            'status' => 'ok',
-            'success' => true,
-            'message' => 'User created and logged in successfully.',
-            'token' => $token,
-            'user' => $userData,
-        ])->withCookie($cookie);
     }
 
     private function errorResponse($message, $statusCode)
@@ -81,19 +93,38 @@ class UserAuthController extends Controller
 
         $user = auth('jwt')->user();
 
-        if ($user) {
-            $userData = User::select('id', 'name', 'email')->find($user->id);
 
-            if ($userData) {
-                $cookie = cookie('jwt', $token, null); // Set token to never expire
-                return response()->json([
-                    'status' => 'ok',
-                    'token' => $token,
-                    'user' => $userData,
-                ])->withCookie($cookie);
+        $userDataWithCustomer = User::with('customer')->find($user->id);
+        // $userDataWithCustomer = User::find($user->id)->with('customer')->first();
+        // return $userDataWithCustomer;
+
+        if ($userDataWithCustomer) {
+            $userData = [
+                'id' => $userDataWithCustomer->id,
+                'name' => $userDataWithCustomer->name,
+                'email' => $userDataWithCustomer->email,
+                'customer' => $userDataWithCustomer->customer ? $userDataWithCustomer->customer : null,
+            ];
+
+
+            if (!$userData) {
+                return $this->errorResponse('User data not found', 500);
             }
-        }
 
-        return response()->json(['error' => 'Invalid email or password. Please try again.'], 401);
+            // Set token to never expire
+            $cookie = cookie('jwt', $token, null);
+
+            // Return a success response
+            return response()->json([
+                'status' => 'ok',
+                'success' => true,
+                'message' => 'User logged in successfully.',
+                'token' => $token,
+                'user' => $userData,
+            ])->withCookie($cookie);
+        } else {
+            // Handle user not found
+            return response()->json(['error' => 'User not found'], 404);
+        }
     }
 }
