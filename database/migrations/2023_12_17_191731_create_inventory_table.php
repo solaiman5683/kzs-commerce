@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('product_id');
             $table->integer('quantity')->default(0);
+            $table->integer('sold_quantity')->default(0);
             $table->boolean('available')->default(true);
             $table->string('sku')->nullable();
+            $table->string('purchase_price');
             $table->timestamps();
             $table->foreign('product_id')->references('id')->on('products');
         });
