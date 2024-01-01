@@ -4,10 +4,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderPlaced;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -69,6 +72,11 @@ class OrderController extends Controller
                     ]);
                 }
             }
+
+            $customerData = Customer::with('user')->find($request->input('customer_id'));
+
+
+            Mail::to(request('email'))->send(new OrderPlaced($customerData->user->email, $order->id));
 
             session()->flash('success', 'Order created successfully.');
         } catch (\Exception $e) {
