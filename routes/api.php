@@ -32,12 +32,12 @@ Route::prefix('categories')->group(function () {
     Route::get('/{id}', [CategoryController::class, 'show']);
 });
 //Register & Login
-Route::post('/userRegister',[UserAuthController::class,'userRegister'])->name('userRegister');
-Route::post('/userLogin',[UserAuthController::class,'userLogin'])->name('userLogin');
+Route::post('/userRegister', [UserAuthController::class, 'userRegister'])->name('userRegister');
+Route::post('/userLogin', [UserAuthController::class, 'userLogin'])->name('userLogin');
 
 
 Route::group(['middleware' => ['jwtAuth']], function () {
-   //Order
-Route::post('/order',[OrderApiController::class,'order'])->name('order');
-Route::get('/orderGet',[OrderApiController::class,'orderGet'])->name('orderGet');
+    Route::post('/order', [OrderApiController::class, 'order'])->name('order');
+    //Order
+    Route::get('/orderGet', [OrderApiController::class, 'orderGet'])->name('orderGet');
 });

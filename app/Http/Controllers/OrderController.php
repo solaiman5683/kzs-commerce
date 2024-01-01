@@ -116,4 +116,10 @@ class OrderController extends Controller
 
         return redirect()->route('orders.index');
     }
+    //printOrder
+    public function printOrder($id)
+    {
+        $order = Order::with('customer','products')->find($id);
+        return view('orders.printOrder',compact('order'));
+    }
 }

@@ -105,6 +105,8 @@
                                                 <i class="ri-money-dollar-circle-fill"></i>
                                             </a>
                                         @endif
+
+                                    <a href="{{ route('printOrder',$order->id) }}" class="btn btn-info mx-2">Print</a>
                                     </td>
                                 </tr>
                             @endforeach
