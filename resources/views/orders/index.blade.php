@@ -108,8 +108,12 @@
                                             @if ($order->payment_status == 'unpaid')
                                                 <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
                                                     <i class="ri-money-dollar-circle-fill"></i>
+
                                                 </a>
                                             @endif
+                                            <a class="btn btn-primary" href="{{ route('third', ['orders', $order->id, 'printOrder']) }}" >
+                                                <i class=" ri-printer-line"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
