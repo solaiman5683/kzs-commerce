@@ -82,10 +82,10 @@
             </div>
         </div>
     </div>
-    <h4 class="header-title mt-3">
+    <h4 class="header-title mt-2">
         Report Summery
     </h4>
-    <div class="row mb-3">
+    <div class="row mb-2">
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
@@ -98,23 +98,12 @@
                 </div>
             </div>
         </div>
+
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">
-                        Total Amount
-                    </h4>
-                    <h2 class="">
-                        ${{ $orders->sum('order_total') }}
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title">
-                        Total Paid
+                        Total Paid Orders
                     </h4>
                     <h2 class="">
                         ${{ $orders->where('payment_status', 'paid')->sum('order_total') }}
@@ -126,10 +115,22 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">
-                        Total Unpaid
+                        Total Unpaid Orders
                     </h4>
                     <h2 class="">
                         ${{ $orders->where('payment_status', 'unpaid')->sum('order_total') }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">
+                        Total Sells Amount
+                    </h4>
+                    <h2 class="">
+                        ${{ $orders->sum('order_total') }}
                     </h2>
                 </div>
             </div>
