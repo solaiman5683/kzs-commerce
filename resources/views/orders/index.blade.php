@@ -32,6 +32,7 @@
         </div>
         @endif
     </div>
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -72,50 +73,50 @@
 
                             <tbody>
                                 @foreach ($orders as $order)
-                                    <tr>
-                                        <td>
-                                            {{ $order->id }}
-                                        </td>
-                                        <td>
-                                            @foreach ($order->products as $product)
-                                                {{ $product->name }} ({{ $product->pivot->quantity }}) <br>
-                                            @endforeach
-                                        </td>
-                                        <td>
-                                            {{ $order->customer->user->name }}
-                                        </td>
-                                        <td>
-                                            {{ $order->products->sum('pivot.quantity') }}
-                                        </td>
-                                        <td>
-                                            ${{ $order->order_total }}
-                                        </td>
-                                        <td>
-                                            <span class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</span>
-                                        </td>
+                                <tr>
+                                    <td>
+                                        {{ $order->id }}
+                                    </td>
+                                    <td>
+                                        @foreach ($order->products as $product)
+                                        {{ $product->name }} ({{ $product->pivot->quantity }}) <br>
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        {{ $order->customer->user->name }}
+                                    </td>
+                                    <td>
+                                        {{ $order->products->sum('pivot.quantity') }}
+                                    </td>
+                                    <td>
+                                        ${{ $order->order_total }}
+                                    </td>
+                                    <td>
+                                        <span class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</span>
+                                    </td>
 
-                                        <td>
-                                            <span class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</span>
-                                        </td>
-                                        <td>
-                                            {{ $order->payment_method ?? 'N/A'  }}
-                                        </td>
-                                        <td>
-                                            {{ $order->transaction_id ? $order->transaction_id : 'N/A' }}
-                                        </td>
-                                        <td>
-                                            {{-- button for make paid --}}
-                                            @if ($order->payment_status == 'unpaid')
-                                                <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
-                                                    <i class="ri-money-dollar-circle-fill"></i>
+                                    <td>
+                                        <span class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</span>
+                                    </td>
+                                    <td>
+                                        {{ $order->payment_method ?? 'N/A'  }}
+                                    </td>
+                                    <td>
+                                        {{ $order->transaction_id ? $order->transaction_id : 'N/A' }}
+                                    </td>
+                                    <td>
+                                        {{-- button for make paid --}}
+                                        @if ($order->payment_status == 'unpaid')
+                                        <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
+                                            <i class="ri-money-dollar-circle-fill"></i>
 
-                                                </a>
-                                            @endif
-                                            <a class="btn btn-primary" href="{{ route('third', ['orders', $order->id, 'printOrder']) }}" >
-                                                <i class=" ri-printer-line"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                        </a>
+                                        @endif
+                                        <a class="btn btn-primary" href="{{ route('third', ['orders', $order->id, 'printOrder']) }}">
+                                            <i class=" ri-printer-line"></i>
+                                        </a>
+                                    </td>
+                                </tr>
                                 @endforeach
                             </tbody>
                         </table>

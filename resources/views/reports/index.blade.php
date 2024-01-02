@@ -82,6 +82,59 @@
             </div>
         </div>
     </div>
+    <h4 class="header-title mt-3">
+        Report Summery
+    </h4>
+    <div class="row mb-3">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">
+                        Total Orders
+                    </h4>
+                    <h2 class="">
+                        {{ $orders->count() }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">
+                        Total Amount
+                    </h4>
+                    <h2 class="">
+                        ${{ $orders->sum('order_total') }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">
+                        Total Paid
+                    </h4>
+                    <h2 class="">
+                        ${{ $orders->where('payment_status', 'paid')->sum('order_total') }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">
+                        Total Unpaid
+                    </h4>
+                    <h2 class="">
+                        ${{ $orders->where('payment_status', 'unpaid')->sum('order_total') }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-12">
