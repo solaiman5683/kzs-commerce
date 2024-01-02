@@ -146,10 +146,16 @@
                                 <label class="form-label" for="attributes">
                                     Attributes
                                 </label>
-                                <div id="attributeFields">
-                                    <!-- Attribute input fields will be added here dynamically -->
-                                </div>
-                                <button type="button" class="btn btn-primary" onclick="addAttributeField()">Add Attribute</button>
+                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="attributes" name="attributes[]" required>
+                                    {{-- <option value="{{ $category->id }}">{{ $category->name }}</option> --}}
+                                    @foreach ($attributes as $attribute)
+                                    <optgroup label="{{ $attribute->name }}">
+                                        @foreach ($attribute->variations as $variation)
+                                        <option value="{{ $variation->id }}">{{ $variation->value }}</option>
+                                        @endforeach
+                                    </optgroup>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="image">

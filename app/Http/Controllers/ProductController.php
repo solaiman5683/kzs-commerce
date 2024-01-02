@@ -31,11 +31,10 @@ class ProductController extends Controller
     public function createProduct()
     {
 
-        $attribute = Attribute::with('variations')->get();
-        dd($attribute->toArray());
+        $attributes = Attribute::with('variations')->get();
         $categories = Category::all();
         // dd($categories);
-        return view('products.create', compact('categories','attribute'));
+        return view('products.create', compact('categories','attributes'));
     }
 
     public function storeProduct(Request $request)
