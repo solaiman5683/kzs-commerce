@@ -7,6 +7,8 @@
     @include('layouts.shared/head-css', ['mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
     @vite(['resources/js/head.js'])
+
+    
 </head>
 
 <body>

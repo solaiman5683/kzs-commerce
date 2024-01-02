@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('slug');
+            $table->unsignedBigInteger('variation_id');
+            $table->foreign('variation_id')->references('id')->on('variations');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('image');

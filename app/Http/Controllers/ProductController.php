@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attribute;
 use App\Models\Category;
 use App\Models\Inventory;
 use App\Models\Product;
+use App\Models\Variation;
+
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -27,9 +30,11 @@ class ProductController extends Controller
 
     public function createProduct()
     {
+        $variations = Variation::all();
+        $attribute = Attribute::all();
         $categories = Category::all();
         // dd($categories);
-        return view('products.create', compact('categories'));
+        return view('products.create', compact('categories','variations','attribute'));
     }
 
     public function storeProduct(Request $request)

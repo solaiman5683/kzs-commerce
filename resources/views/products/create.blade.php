@@ -142,7 +142,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="mb-2 col-lg-6">
+                            <div class="mb-2 col-lg-4">
+                                <label class="form-label" for="attributes">
+                                    Attributes
+                                </label>
+                                <div id="attributeFields">
+                                    <!-- Attribute input fields will be added here dynamically -->
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="addAttributeField()">Add Attribute</button>
+                            </div>
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="image">
                                     Image
                                 </label>
@@ -154,7 +163,7 @@
                                     Please provide a valid image for the product.
                                 </div>
                             </div>
-                            <div class="mb-2 col-lg-6">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="gallery">
                                     Gellary Images
                                 </label>
@@ -232,4 +241,7 @@
     }
 
 </script>
+
+
+
 @endsection

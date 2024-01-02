@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Attribute;
 use App\Models\Variation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VariationController extends Controller
 {
@@ -32,4 +33,5 @@ class VariationController extends Controller
         $variation = Variation::all();
         return view('variation.allVariation',compact('variation'));
     }
+    
 }

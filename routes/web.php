@@ -59,6 +59,8 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
     //addVariation
     Route::match(['get','post'],'/addVariation',[VariationController::class,'addVariation'])->name('addVariation');
     Route::match(['get'],'/allVariation',[VariationController::class,'allVariation'])->name('allVariation');
+    ///get-value
+    
     //endVariation
 
     Route::group(['prefix' => 'categories'], function () {
