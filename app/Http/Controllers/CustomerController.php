@@ -14,7 +14,7 @@ class CustomerController extends Controller
         $customers = Customer::with('orders','user:id,name,email')->get();
         // dd($customers);
         $users = User::find(18)->with('customer')->first();
-        dd($users->customer);
+        // dd($users->customer);
         return view('customers.index', compact('customers'));
     }
     public function createCustomer()

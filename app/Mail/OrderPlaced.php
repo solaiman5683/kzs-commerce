@@ -42,9 +42,12 @@ class OrderPlaced extends Mailable
     public function content(): Content
     {
         $order = Order::with('customer','products')->find($this->order_id);
-        dd($order);
+        // dd($order);
         return new Content(
             view: 'order_placed',
+            with: [
+                'order' => $order
+            ]
         );
     }
 

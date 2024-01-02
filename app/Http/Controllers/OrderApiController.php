@@ -67,6 +67,10 @@ class OrderApiController extends Controller
 
             // Mail::to(request('user_email'))->send(new OrderPlaced(['user' => $user]));
 
+            $customerData = Customer::with('user')->find($customerId);
+
+            Mail::to(request('email'))->send(new OrderPlaced($customerData->user->email, $order->id));
+
 
             return response()->json([
                 'status' => 'ok',
