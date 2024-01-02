@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InventoryController;
@@ -7,7 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
-
+use App\Http\Controllers\VariationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,20 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::get('{id}/edit', [ProductController::class, 'editProduct'])->name('editProduct');
         Route::post('{id}/edit', [ProductController::class, 'updateProduct'])->name('updateProduct');
         Route::get('{id}/delete', [ProductController::class, 'deleteProduct'])->name('deleteProduct');
+
+
     });
+
+    // attribute
+    Route::match(['get','post'],'/addAttribute',[AttributeController::class,'addAttribute'])->name('addAttribute');
+    Route::match(['get'],'/allAttribute',[AttributeController::class,'allAttribute'])->name('allAttribute');
+
+    //end attribute
+    //addVariation
+    Route::match(['get','post'],'/addVariation',[VariationController::class,'addVariation'])->name('addVariation');
+    Route::match(['get'],'/allVariation',[VariationController::class,'allVariation'])->name('allVariation');
+    //endVariation
+
     Route::group(['prefix' => 'categories'], function () {
         // redirect / to /products/index
         Route::get('', fn()=>redirect()->route('categories'))->name('categoriesRoot');
