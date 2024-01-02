@@ -6,6 +6,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\VariationController;
@@ -109,6 +110,14 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::post('{id}/edit', [OrderController::class, 'updateOrder'])->name('updateOrder');
         Route::get('{id}/delete', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
         Route::get('{id}/printOrder', [OrderController::class, 'printOrder'])->name('printOrder');
+    });
+
+    // Reports Routes
+    Route::group(['prefix' => 'reports'], function () {
+        // redirect / to /products/index
+        Route::get('/', fn()=>redirect()->route('index'))->name('reportsRoot');
+        Route::get('index', [ReportsController::class, 'index'])->name('index');
+        Route::post('date-range', [ReportsController::class, 'dateRange'])->name('dateRange');
     });
 
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');

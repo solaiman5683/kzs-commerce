@@ -54,7 +54,7 @@
             <li class="side-nav-title">Navigation</li>
 
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="{{ route('any', 'index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                <a href="{{ route('any', 'index') }}" class="side-nav-link">
                     <i class="ri-home-4-line"></i>
                     {{-- <span class="badge bg-success float-end">2</span> --}}
                     <span> Dashboards </span>
@@ -172,10 +172,28 @@
                     </ul>
                 </div>
             </li>
-            <a href="{{ route('second', ['pages', 'invoice']) }}" class="side-nav-link">
+            <li class="side-nav-title">Reports</li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarReports" aria-expanded="false" aria-controls="sidebarReports" class="side-nav-link">
+                    <i class="ri-list-check-3"></i>
+                    <span> Reports </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarReports">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{ route('second', ['reports', 'index']) }}">Order Report</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('second', ['reports', 'inventory']) }}">Inventory Report</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            {{-- <a href="{{ route('second', ['pages', 'invoice']) }}" class="side-nav-link">
                 <i class="ri-pages-line "></i>
                 <span> Invoice </span>
-            </a>
+            </a> --}}
 
             {{-- <li class="side-nav-item">
                 <a href="{{ route('second', ['apps', 'calendar']) }}" class="side-nav-link">
