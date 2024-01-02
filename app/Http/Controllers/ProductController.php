@@ -30,11 +30,12 @@ class ProductController extends Controller
 
     public function createProduct()
     {
-        $variations = Variation::all();
-        $attribute = Attribute::all();
+
+        $attribute = Attribute::with('variations')->get();
+        dd($attribute->toArray());
         $categories = Category::all();
         // dd($categories);
-        return view('products.create', compact('categories','variations','attribute'));
+        return view('products.create', compact('categories','attribute'));
     }
 
     public function storeProduct(Request $request)
