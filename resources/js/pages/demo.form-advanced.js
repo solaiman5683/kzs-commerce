@@ -66,6 +66,18 @@ $(document).ready(function () {
         dateFormat: "Y-m-d",
     });
 
+    $('#humanfd-start-date').flatpickr({
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+    });
+    
+    $('#humanfd-end-date').flatpickr({
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+    });
+
     $('#minmax-datepicker').flatpickr({
         minDate: "2020-01",
         maxDate: "2020-03"
