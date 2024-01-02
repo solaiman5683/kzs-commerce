@@ -71,7 +71,7 @@
                                     {{ $variations->id }}
                                 </td>
                                 <td>
-                                    {{ $variations->attribute_id }}
+                                    {{ $variations->attribute->name }}
                                 </td>
                                 <td>
                                     {{ $variations->value }}
