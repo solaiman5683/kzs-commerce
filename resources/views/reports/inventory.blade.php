@@ -62,7 +62,7 @@
                         Total Sells Amount
                     </h4>
                     <h2 class="">
-                        ${{ collect($inventory)->sum(function ($item) {
+                        €{{ collect($inventory)->sum(function ($item) {
                             return $item->sold_quantity * $item->product->sale_price;
                         }) }}
                     </h2>
@@ -76,7 +76,7 @@
                         Total Expenses
                     </h4>
                     <h2 class="">
-                        ${{ collect($inventory)->sum(function ($item) {
+                        €{{ collect($inventory)->sum(function ($item) {
                             return $item->sold_quantity * $item->purchase_price;
                         }) }}
                     </h2>
@@ -90,7 +90,7 @@
                         Total Profit
                     </h4>
                     <h2 class="">
-                        ${{ collect($inventory)->sum(function ($item) {
+                        €{{ collect($inventory)->sum(function ($item) {
                             return $item->sold_quantity * ($item->product->sale_price - $item->purchase_price);
                         }) }}
                     </h2>
@@ -150,10 +150,10 @@
                                     {{ $item->sold_quantity }}
                                 </td>
                                 <td class="text-end">
-                                    ${{ $item->sold_quantity * $item->product->sale_price }}
+                                    €{{ $item->sold_quantity * $item->product->sale_price }}
                                 </td>
                                 <td class="text-end">
-                                    ${{ $item->sold_quantity * ($item->product->sale_price - $item->purchase_price) }}
+                                    €{{ $item->sold_quantity * ($item->product->sale_price - $item->purchase_price) }}
                                 </td>
                             </tr>
                             @endforeach
