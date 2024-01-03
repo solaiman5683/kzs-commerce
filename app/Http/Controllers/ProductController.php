@@ -33,7 +33,7 @@ class ProductController extends Controller
 
         $attributes = Attribute::with('variations')->get();
         $categories = Category::all();
-        // dd($categories);
+        // dd($attributes);
         return view('products.create', compact('categories','attributes'));
     }
 
@@ -72,6 +72,7 @@ class ProductController extends Controller
                 'name' => $request->name,
                 'description' => $request->description,
                 'slug' => $request->slug,
+                // 'variation_id' => $request->variation_id,
                 'price' => $request->price,
                 'sale_price' => $request->sale_price,
                 'isNewArrival' => $request->has('isNewArrival') ? 'true' : 'false',
@@ -97,6 +98,7 @@ class ProductController extends Controller
             // Attach categories to the product
             $product->categories()->attach($request->input('categories'));
 
+            
             // Set success message
             session()->flash('success', 'Product added successfully');
         } catch (\Exception $e) {

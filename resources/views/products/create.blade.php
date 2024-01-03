@@ -142,21 +142,22 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="mb-2 col-lg-4">
+                            {{-- <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="attributes">
                                     Attributes
                                 </label>
-                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="attributes" name="attributes[]" required>
+                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="attributes" name="variation_id[]" required> --}}
                                     {{-- <option value="{{ $category->id }}">{{ $category->name }}</option> --}}
-                                    @foreach ($attributes as $attribute)
+
+                                    {{-- @foreach ($attributes as $attribute)
                                     <optgroup label="{{ $attribute->name }}">
                                         @foreach ($attribute->variations as $variation)
                                         <option value="{{ $variation->id }}">{{ $variation->value }}</option>
                                         @endforeach
                                     </optgroup>
-                                    @endforeach
-                                </select>
-                            </div>
+                                    @endforeach --}}
+                                {{-- </select>
+                            </div> --}}
                             <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="image">
                                     Image
