@@ -99,7 +99,7 @@ class ProductController extends Controller
             // Attach categories to the product
             $product->categories()->attach($request->input('categories'));
 
-            
+
             // Set success message
             session()->flash('success', 'Product added successfully');
         } catch (\Exception $e) {

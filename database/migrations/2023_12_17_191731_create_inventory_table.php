@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('sold_quantity')->default(0);
             $table->boolean('available')->default(true);
             $table->string('sku')->nullable();
-            $table->string('purchase_price');
+            $table->integer('purchase_price')->default(0);
             $table->timestamps();
             $table->foreign('product_id')->references('id')->on('products');
         });
