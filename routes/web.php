@@ -60,7 +60,7 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
     Route::match(['get','post'],'/addVariation',[VariationController::class,'addVariation'])->name('addVariation');
     Route::match(['get'],'/allVariation',[VariationController::class,'allVariation'])->name('allVariation');
     ///get-value
-    
+
     //endVariation
 
     Route::group(['prefix' => 'categories'], function () {
@@ -120,6 +120,7 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::get('/', fn()=>redirect()->route('index'))->name('reportsRoot');
         Route::get('index', [ReportsController::class, 'index'])->name('index');
         Route::post('date-range', [ReportsController::class, 'dateRange'])->name('dateRange');
+        Route::get('inventory', [ReportsController::class, 'inventory'])->name('inventory');
     });
 
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');
