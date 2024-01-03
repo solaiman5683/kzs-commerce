@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inventory;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -36,12 +37,12 @@ class ReportsController extends Controller
         return redirect()->route('second', ['reports', 'index'])->with('orders', $orders);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function inventory()
     {
         //
+        $inventory = Inventory::with('product')->get();
+        // dd($inventory);
+        return view('reports.inventory', compact('inventory'));
     }
 
     /**

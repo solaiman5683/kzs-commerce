@@ -60,14 +60,37 @@
                     <span> Dashboards </span>
                 </a>
             </li>
-            {{-- AttributeAndVeriation --}}
+
+
+            <li class="side-nav-title">Apps</li>
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarCategories" aria-expanded="false" aria-controls="sidebarCategories" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarProducts" aria-expanded="false" aria-controls="sidebarProducts" class="side-nav-link">
+                    <i class="ri-shopping-cart-line"></i>
+                    <span> Products </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarProducts">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{ route('second', ['products', 'index']) }}">All Product</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('second', ['products', 'create']) }}">Add New Product</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('second', ['inventory', 'index']) }}">Inventory</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+             {{-- AttributeAndVeriation --}}
+             <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarAttribute" aria-expanded="false" aria-controls="sidebarAttribute" class="side-nav-link">
                     <i class="ri-links-fill"></i>
                     <span> Attribute </span>
                     <span class="menu-arrow"></span>
                 </a>
-                <div class="collapse" id="sidebarCategories">
+                <div class="collapse" id="sidebarAttribute">
                     <ul class="side-nav-second-level">
                         <li>
                             <a href="{{ route('allAttribute') }}">All Attribute</a>
@@ -81,40 +104,18 @@
             {{--End AttributeAndVeriation --}}
             {{-- Veriation --}}
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarCategories" aria-expanded="false" aria-controls="sidebarCategories" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarVariation" aria-expanded="false" aria-controls="sidebarVariation" class="side-nav-link">
                     <i class="ri-links-fill"></i>
                     <span> Variation </span>
                     <span class="menu-arrow"></span>
                 </a>
-                <div class="collapse" id="sidebarCategories">
+                <div class="collapse" id="sidebarVariation">
                     <ul class="side-nav-second-level">
                         <li>
                             <a href="{{ route('allVariation') }}">All Variation</a>
                         </li>
                         <li>
                             <a href="{{ route('addVariation') }}">Add Variation</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            {{--End Veriation --}}
-
-
-            <li class="side-nav-title">Apps</li>
-            <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarProducts" aria-expanded="false" aria-controls="sidebarProducts" class="side-nav-link">
-                    <i class="ri-shopping-cart-line"></i>
-                    <span> Products </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <div class="collapse" id="sidebarProducts">
-                    <ul class="side-nav-second-level">
-
-                        <li>
-                            <a href="{{ route('second', ['products', 'create']) }}">Add New Product</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('second', ['inventory', 'index']) }}">Inventory</a>
                         </li>
                     </ul>
                 </div>

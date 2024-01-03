@@ -47,6 +47,7 @@ class ProductController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'gallery' => 'nullable|array',
             'gallery.*' => 'image|mimes:jpeg,png,jpg,gif',
+            'purchase_price' => 'required|string',
             'price' => 'required|string',
             'sale_price' => 'required|string',
             'isNewArrival' => 'nullable|in:on,off',
@@ -88,8 +89,8 @@ class ProductController extends Controller
             // Create a new Inventory instance and fill it with the product information
             $inventory = new Inventory([
                 'product_id' => $product->id,
-                'quantity' => $request->quantity, // You can set an initial quantity if needed
-                // ... (other inventory fields)
+                'purchase_price' => $request->purchase_price,
+                'quantity' => $request->quantity,
             ]);
 
             // Save the inventory record to the database

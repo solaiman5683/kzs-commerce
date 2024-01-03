@@ -16,17 +16,17 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('slug');
-            $table->unsignedBigInteger('variation_id');
-            $table->foreign('variation_id')->references('id')->on('variations');
+            // $table->unsignedBigInteger('variation_id');
+            // $table->foreign('variation_id')->references('id')->on('variations');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('image');
             $table->string('gallery');
             $table->string('price');
             $table->string('sale_price');
-            $table->enum('isNewArrival',['true','false'])->default('false');
-            $table->enum('featured',['true','false'])->default('false');
-            $table->enum('isOnSale',['true','false'])->default('false');
+            $table->enum('isNewArrival', ['true', 'false'])->default('false');
+            $table->enum('featured', ['true', 'false'])->default('false');
+            $table->enum('isOnSale', ['true', 'false'])->default('false');
             $table->timestamps();
         });
     }

@@ -100,6 +100,18 @@
 
                         <div class="row">
                             <div class="mb-2 col-lg-3">
+                                <label class="form-label" for="purchase_price">
+                                    Purchase Price
+                                </label>
+                                <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="purchase_price" placeholder="Enter Purchase Price" name="purchase_price" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid Price for the product.
+                                </div>
+                            </div>
+                            <div class="mb-2 col-lg-3">
                                 <label class="form-label" for="price">
                                     Price
                                 </label>
@@ -123,7 +135,25 @@
                                 </label>
                                 <input type="text" pattern="\d+(\.\d{1,2})?" oninput="validateDecimal(this)" class="form-control" id="quantity" placeholder="Enter Quantity" value='1' name="quantity">
                             </div>
-                            <div class="mb-2 col-lg-3">
+
+                        </div>
+                        <div class="row">
+                            {{-- <div class="mb-2 col-lg-4">
+                                <label class="form-label" for="attributes">
+                                    Attributes
+                                </label>
+                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="attributes" name="attributes[]" required>
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @foreach ($attributes as $attribute)
+                                    <optgroup label="{{ $attribute->name }}">
+                                        @foreach ($attribute->variations as $variation)
+                                        <option value="{{ $variation->id }}">{{ $variation->value }}</option>
+                                        @endforeach
+                                    </optgroup>
+                                    @endforeach
+                                </select>
+                            </div> --}}
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="categories">
                                     Categories
                                 </label>
@@ -140,24 +170,6 @@
                                     </optgroup> --}}
                                 </select>
                             </div>
-                        </div>
-                        <div class="row">
-                            {{-- <div class="mb-2 col-lg-4">
-                                <label class="form-label" for="attributes">
-                                    Attributes
-                                </label>
-                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="attributes" name="variation_id[]" required> --}}
-                                    {{-- <option value="{{ $category->id }}">{{ $category->name }}</option> --}}
-
-                                    {{-- @foreach ($attributes as $attribute)
-                                    <optgroup label="{{ $attribute->name }}">
-                                        @foreach ($attribute->variations as $variation)
-                                        <option value="{{ $variation->id }}">{{ $variation->value }}</option>
-                                        @endforeach
-                                    </optgroup>
-                                    @endforeach --}}
-                                {{-- </select>
-                            </div> --}}
                             <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="image">
                                     Image
