@@ -51,6 +51,7 @@
                         All products list in the system. You can add, edit or delete a product from here.
                     </p>
 
+                   <div class="table-responsive">
                     <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
                         <thead>
                             <tr>
@@ -115,6 +116,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                   </div>
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->
