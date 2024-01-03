@@ -51,6 +51,7 @@
                         All the customers are listed here. You can add, edit or delete customers from here.
                     </p>
 
+                   <div class="table-responsive">
                     <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
                         <thead>
                             <tr>
@@ -84,6 +85,7 @@
                         </tbody>
                     </table>
 
+                   </div>
                 </div> <!-- end card body-->
             </div> <!-- end card -->
         </div><!-- end col-->

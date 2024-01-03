@@ -149,6 +149,7 @@
                         Here is the list of all orders. You can filter the orders by date range.
                     </p>
 
+                   <div class="table-responsive">
                     <table id="basic-datatable" class="table table-striped dt-responsive nowrap w-100">
                         <thead>
                             <tr>
@@ -198,6 +199,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                   </div>
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->

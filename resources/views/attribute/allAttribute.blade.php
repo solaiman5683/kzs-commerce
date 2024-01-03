@@ -51,41 +51,43 @@
                         All products list in the system. You can add, edit or delete a product from here.
                     </p>
 
-                    <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Slug</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
+                    <div class="table-responsive">
+                        <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Slug</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
 
 
-                        <tbody>
+                            <tbody>
 
-                            @foreach ($attribute as $attributes)
-                            <tr>
-                                <td>
-                                    {{ $attributes->id }}
-                                </td>
-                                <td>
-                                    {{ $attributes->name }}
-                                </td>
-                                <td>
-                                    {{ $attributes->slug }}
-                                </td>
+                                @foreach ($attribute as $attributes)
+                                <tr>
+                                    <td>
+                                        {{ $attributes->id }}
+                                    </td>
+                                    <td>
+                                        {{ $attributes->name }}
+                                    </td>
+                                    <td>
+                                        {{ $attributes->slug }}
+                                    </td>
 
-                                <td>
-                                    <a href="" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
-                                    <a href="" class="btn btn-xs btn-danger waves-effect waves-light">
-                                        <i class="ri-delete-bin-6-fill"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                                    <td>
+                                        <a href="" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
+                                        <a href="" class="btn btn-xs btn-danger waves-effect waves-light">
+                                            <i class="ri-delete-bin-6-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->

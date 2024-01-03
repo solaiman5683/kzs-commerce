@@ -51,53 +51,55 @@
                         All products list in the system. You can add, edit or delete a product from here.
                     </p>
 
-                    <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Slug</th>
-                                <th>Parent</th>
-                                <th>Products Count</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
+                    <div class="table-responsive">
+                        <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Slug</th>
+                                    <th>Parent</th>
+                                    <th>Products Count</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
 
 
-                        <tbody>
+                            <tbody>
 
-                            @foreach ($categories as $category)
-                            <tr>
-                                <td>
-                                    {{ $category->id }}
-                                </td>
-                                <td>
-                                    {{ $category->name  }}
-                                </td>
-                                <td>
-                                    {{ $category->slug }}
-                                </td>
-                                <td>
-                                    @if ($category->parent)
-                                    <span class="badge bg-soft-success text-success">{{ $category->parent->name }}</span>
-                                    @else
-                                    <span class="badge bg-soft-danger text-danger">No Parent Category</span>
-                                    @endif
-                                </td>
-                                <td>
-                                    <span class="badge bg-soft-success text-success">{{ $category->products->count() }}</span>
-                                </td>
+                                @foreach ($categories as $category)
+                                <tr>
+                                    <td>
+                                        {{ $category->id }}
+                                    </td>
+                                    <td>
+                                        {{ $category->name  }}
+                                    </td>
+                                    <td>
+                                        {{ $category->slug }}
+                                    </td>
+                                    <td>
+                                        @if ($category->parent)
+                                        <span class="badge bg-soft-success text-success">{{ $category->parent->name }}</span>
+                                        @else
+                                        <span class="badge bg-soft-danger text-danger">No Parent Category</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-soft-success text-success">{{ $category->products->count() }}</span>
+                                    </td>
 
-                                <td>
-                                    <a href="{{ route('third', ['categories', $category->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
-                                    <a href="{{ route('third', ['categories', $category->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
-                                        <i class="ri-delete-bin-6-fill"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                                    <td>
+                                        <a href="{{ route('third', ['categories', $category->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
+                                        <a href="{{ route('third', ['categories', $category->id, 'delete']) }}" class="btn btn-xs btn-danger waves-effect waves-light">
+                                            <i class="ri-delete-bin-6-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->
