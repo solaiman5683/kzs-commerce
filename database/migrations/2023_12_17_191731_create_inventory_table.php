@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('sku')->nullable();
             $table->integer('purchase_price')->default(0);
             $table->timestamps();
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
