@@ -27,7 +27,7 @@ class ProductController extends Controller
         if ($request->has('isNewArrival')) {
             $query->where('isNewArrival', $request->input('isNewArrival'));
         }
-        $query->with('variations', 'categories','inventory');
+        $query->with('variations.attribute', 'categories');
         $products = $query->get();
 
         return response()->json(['data' => ProductResource::collection($products)]);
