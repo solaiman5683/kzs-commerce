@@ -24,7 +24,10 @@ class Product extends Model
     {
         return $this->belongsToMany(Category::class);
     }
-
+    public function variations()
+    {
+        return $this->belongsToMany(Variation::class, 'product_variations');
+    }
     public function inventory()
     {
         return $this->hasOne(Inventory::class);
@@ -32,6 +35,6 @@ class Product extends Model
 
     public function orders()
     {
-        return $this->belongsToMany(Order::class)->withPivot('quantity', 'price');
+        return $this->belongsToMany(Order::class);
     }
 }

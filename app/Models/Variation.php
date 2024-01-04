@@ -14,4 +14,8 @@ class Variation extends Model
     {
         return $this->belongsTo(Attribute::class);
     }
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_variations')->withPivot('quantity', 'price');
+    }
 }

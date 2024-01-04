@@ -81,6 +81,7 @@ class ProductController extends Controller
                 'isOnSale' => $request->has('isOnSale') ? 'true' : 'false',
                 'image' => $imagePath, // Set the image path here
                 'gallery' => json_encode($galleryPaths),
+                // 'attribute' => json_encode($request->attributes),
             ]);
 
             // Save the product to the database
@@ -98,6 +99,7 @@ class ProductController extends Controller
 
             // Attach categories to the product
             $product->categories()->attach($request->input('categories'));
+            $product->variations()->attach($request->input('attributes'));
 
 
             // Set success message
