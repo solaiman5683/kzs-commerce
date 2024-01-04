@@ -59,11 +59,11 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">
-                        Total Sells Amount
+                        Total Purchase Amount
                     </h4>
                     <h2 class="">
                         €{{ collect($inventory)->sum(function ($item) {
-                            return $item->sold_quantity * $item->product->sale_price;
+                            return $item->sold_quantity * $item->purchase_price;
                         }) }}
                     </h2>
                 </div>
@@ -73,11 +73,11 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">
-                        Total Expenses
+                        Total Sells Amount
                     </h4>
                     <h2 class="">
                         €{{ collect($inventory)->sum(function ($item) {
-                            return $item->sold_quantity * $item->purchase_price;
+                            return $item->sold_quantity * $item->product->sale_price;
                         }) }}
                     </h2>
                 </div>
