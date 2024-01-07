@@ -17,7 +17,7 @@ class OrderController extends Controller
     public function index()
     {
         // Retrieve all orders
-        $orders = Order::with('customer.user','products')->get();
+        $orders = Order::with('customer.user', 'products')->get();
         // dd($orders);
         return view('orders.index', ['orders' => $orders]);
     }
@@ -70,6 +70,14 @@ class OrderController extends Controller
                         'quantity' => $quantity,
                         'price' => $price,
                     ]);
+
+                    // Decrease the quantity of each product ordered from the inventory
+                    $product->inventory->quantity -= $quantity;
+
+                    // Increase sold_quantity of each product ordered from the inventory
+                    $product->inventory->sold_quantity += $quantity;
+
+                    $product->inventory->save();
                 }
             }
 
@@ -126,7 +134,7 @@ class OrderController extends Controller
     //printOrder
     public function printOrder($id)
     {
-        $order = Order::with('customer','products')->find($id);
-        return view('orders.printOrder',compact('order'));
+        $order = Order::with('customer', 'products')->find($id);
+        return view('orders.printOrder', compact('order'));
     }
 }

@@ -7,9 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inventory extends Model
 {
-    protected $table = 'inventory';
-    protected $fillable = ['product_id', 'quantity'];
     use HasFactory;
+
+    protected $table = 'inventory';
+
+    protected $guarded = [];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($inventory) {
+            $inventory->sku = 'SKU_' . uniqid();
+        });
+    }
 
     public function product()
     {

@@ -84,6 +84,8 @@ class ProductController extends Controller
                 // 'attribute' => json_encode($request->attributes),
             ]);
 
+            // dd($request->all());
+
             // Save the product to the database
             $product->save();
 

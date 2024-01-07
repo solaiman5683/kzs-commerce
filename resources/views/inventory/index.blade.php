@@ -56,7 +56,8 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Purchase Price</th>
+                                <th>Sale Price</th>
                                 <th>Stock Quantity</th>
                                 <th>
                                     Quantity Alert
@@ -74,6 +75,9 @@
                                 </td>
                                 <td>
                                     {{ $item->product->name  }}
+                                </td>
+                                <td>
+                                    <h4>${{ $item->purchase_price }}</h4>
                                 </td>
                                 <td>
                                     <h4>${{ $item->product->sale_price  }} <small><del>${{ $item->product->price  }}</del></small></h4>

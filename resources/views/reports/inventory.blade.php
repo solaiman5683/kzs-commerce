@@ -63,7 +63,7 @@
                     </h4>
                     <h2 class="">
                         €{{ collect($inventory)->sum(function ($item) {
-                            return $item->sold_quantity * $item->purchase_price;
+                            return ($item->sold_quantity + $item->quantity) * $item->purchase_price;
                         }) }}
                     </h2>
                 </div>
@@ -120,6 +120,9 @@
                                     Product Name
                                 </th>
                                 <th>
+                                    Purchase Amount (per unit)
+                                </th>
+                                <th>
                                     Available Quantity
                                 </th>
                                 <th>
@@ -143,6 +146,9 @@
                                 </td>
                                 <td>
                                     {{ $item->product->name }}
+                                </td>
+                                <td>
+                                    €{{ $item->purchase_price }}
                                 </td>
                                 <td>
                                     {{ $item->quantity }}
