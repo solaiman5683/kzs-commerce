@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Attribute extends Model
 {
     use HasFactory;
-    protected $guarded= [];
+    protected $guarded = [];
     public function variations()
     {
-    return $this->hasMany(Variation::class);
+        return $this->hasMany(Variation::class);
     }
 }
