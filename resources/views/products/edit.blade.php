@@ -102,6 +102,18 @@
 
                         <div class="row">
                             <div class="mb-2 col-lg-4">
+                                <label class="form-label" for="purchase_price">
+                                    Purchase Price
+                                </label>
+                                <input type="text" class="form-control" value="{{ $product->inventory->purchase_price }}" id="purchase_price" name="purchase_price">
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid image for the product.
+                                </div>
+                            </div>
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="price">
                                     Price
                                 </label>
@@ -119,6 +131,9 @@
                                 </label>
                                 <input type="text" pattern="\d+(\.\d{1,2})?" value="{{ $product->sale_price }}" oninput="validateDecimal(this)" class="form-control" id="sale_price" placeholder="Enter Sale Price" name="sale_price">
                             </div>
+
+                        </div>
+                        <div class="row">
                             <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="categories">
                                     Categories
@@ -141,9 +156,7 @@
                                     </optgroup> --}}
                                 </select>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="mb-2 col-lg-6">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="image">
                                     Image
                                 </label>
@@ -155,7 +168,7 @@
                                     Please provide a valid image for the product.
                                 </div>
                             </div>
-                            <div class="mb-2 col-lg-6">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="gallery">
                                     Gellary Images
                                 </label>

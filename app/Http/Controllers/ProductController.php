@@ -124,7 +124,7 @@ class ProductController extends Controller
 
     public function editProduct($id)
     {
-        $product = Product::find($id);
+        $product = Product::with('inventory')->find($id);
         $categories = Category::all();
         return view('products.edit', compact('product', 'categories'));
     }
@@ -145,6 +145,7 @@ class ProductController extends Controller
                 'gallery.*' => 'image|mimes:jpeg,png,jpg,gif',
                 'price' => 'string',
                 'sale_price' => 'string',
+                'purchase_price' => 'string',
                 'isNewArrival' => 'nullable|in:on,off',
                 'featured' => 'nullable|in:on,off',
                 'isOnSale' => 'nullable|in:on,off',
@@ -181,6 +182,12 @@ class ProductController extends Controller
             // Sync categories
             if ($request->has('categories')) {
                 $product->categories()->sync($request->input('categories'));
+            }
+
+            if($request->has('purchase_price')){
+                $inventory = Inventory::where('product_id', $id)->first();
+                $inventory->purchase_price = $request->purchase_price;
+                $inventory->save();
             }
 
             // Set success message

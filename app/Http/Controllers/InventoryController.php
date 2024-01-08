@@ -21,17 +21,33 @@ class InventoryController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function editInventory($id)
     {
         //
+        $inventory = Inventory::with('product')->find($id);
+        // dd($inventory);
+        return view('inventory.edit', compact('inventory'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function updateInventory(Request $request)
     {
         //
+        $request->validate([
+            'quantity' => 'string',
+            'purchase_price' => 'string',
+        ]);
+
+        $inventory = Inventory::find($request->id);
+        $inventory->quantity = $request->quantity;
+        $inventory->purchase_price = $request->purchase_price;
+        $inventory->save();
+
+        session()->flash('success', 'Inventory updated successfully');
+
+        return redirect()->route('second', ['inventory', 'index']);
     }
 
     /**

@@ -54,13 +54,16 @@
                     <table id="alternative-page-datatable" class="table table-striped dt-responsive nowrap w-100">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>S/L</th>
                                 <th>Name</th>
                                 <th>Purchase Price</th>
                                 <th>Sale Price</th>
                                 <th>Stock Quantity</th>
                                 <th>
                                     Quantity Alert
+                                </th>
+                                <th>
+                                    Action
                                 </th>
                             </tr>
                         </thead>
@@ -71,7 +74,7 @@
                             @foreach ($inventory as $item)
                             <tr>
                                 <td>
-                                    {{ $item->id }}
+                                    {{ $loop->iteration }}
                                 </td>
                                 <td>
                                     {{ $item->product->name  }}
@@ -89,6 +92,9 @@
                                 </td>
                                 <td>
                                     <h4 style="font-size: .8rem;" class="badge {{ $item->quantity > 5 ? 'bg-soft-success text-success' : ' bg-soft-danger text-danger' }}">{{ $item->quantity > 5 ? 'Stock Available' : 'Low Stock' }}</h4>
+                                </td>
+                                <td>
+                                    <a href="{{ route('third', ['inventory', $item->id, 'edit']) }}" class="btn btn-xs btn-secondary waves-effect waves-light"><i class="ri-edit-2-fill "></i></a>
                                 </td>
                             </tr>
                             @endforeach
