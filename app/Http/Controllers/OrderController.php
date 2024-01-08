@@ -129,7 +129,10 @@ class OrderController extends Controller
         $order = Order::findOrFail($id);
         $order->delete();
 
-        return redirect()->route('orders.index');
+        // Set flash data with success message
+        session()->flash('success', 'Order deleted successfully.');
+
+        return redirect()->route('second', ['orders', 'index']);
     }
     //printOrder
     public function printOrder($id)

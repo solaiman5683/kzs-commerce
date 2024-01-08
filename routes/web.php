@@ -110,7 +110,7 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::get('{id}', [OrderController::class, 'showOrder'])->name('showOrder');
         Route::get('{id}/edit', [OrderController::class, 'editOrder'])->name('editOrder');
         Route::post('{id}/edit', [OrderController::class, 'updateOrder'])->name('updateOrder');
-        Route::get('{id}/delete', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
+        Route::get('{id}/delete', [OrderController::class, 'destroy'])->name('deleteOrder');
         Route::get('{id}/printOrder', [OrderController::class, 'printOrder'])->name('printOrder');
     });
 

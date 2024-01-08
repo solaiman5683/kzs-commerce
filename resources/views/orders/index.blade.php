@@ -106,14 +106,17 @@
                                     </td>
                                     <td>
                                         {{-- button for make paid --}}
-                                        @if ($order->payment_status == 'unpaid')
+                                        {{-- @if ($order->payment_status == 'unpaid')
                                         <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
                                             <i class="ri-money-dollar-circle-fill"></i>
 
                                         </a>
-                                        @endif
+                                        @endif --}}
                                         <a class="btn btn-primary" href="{{ route('third', ['orders', $order->id, 'printOrder']) }}">
                                             <i class=" ri-printer-line"></i>
+                                        </a>
+                                        <a class="btn btn-danger" href="{{ route('third', ['orders', $order->id, 'delete']) }}">
+                                            <i class="ri-delete-bin-6-line "></i>
                                         </a>
                                     </td>
                                 </tr>
