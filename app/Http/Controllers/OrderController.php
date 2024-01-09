@@ -45,6 +45,7 @@ class OrderController extends Controller
                 'customer_id' => 'required|exists:customers,id',
                 'products.*' => 'required|exists:products,id',
                 'quantities.*' => 'required|integer|min:1',
+                'payment_status' => 'required|string',
                 'total' => 'required|numeric|min:0',
             ]);
 
@@ -52,6 +53,7 @@ class OrderController extends Controller
             $order = new Order([
                 'customer_id' => $request->input('customer_id'),
                 'order_total' => $request->input('total'),
+                'payment_status' => $request->input('payment_status'),
                 // Add other order-related fields if needed
             ]);
             $order->save();
@@ -139,5 +141,27 @@ class OrderController extends Controller
     {
         $order = Order::with('customer', 'products')->find($id);
         return view('orders.printOrder', compact('order'));
+    }
+
+    // makePaid
+    public function makePaid($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->payment_status = 'paid';
+        $order->save();
+
+        session()->flash('success', 'Order payment status updated successfully.');
+
+        return redirect()->route('second', ['orders', 'index']);
+    }
+    public function changeStatus($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->status = 'delivered';
+        $order->save();
+
+        session()->flash('success', 'Order status updated successfully.');
+
+        return redirect()->route('second', ['orders', 'index']);
     }
 }

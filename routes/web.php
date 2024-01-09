@@ -112,6 +112,8 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::post('{id}/edit', [OrderController::class, 'updateOrder'])->name('updateOrder');
         Route::get('{id}/delete', [OrderController::class, 'destroy'])->name('deleteOrder');
         Route::get('{id}/printOrder', [OrderController::class, 'printOrder'])->name('printOrder');
+        Route::get('{id}/make-paid', [OrderController::class, 'makePaid'])->name('makePaid');
+        Route::get('{id}/change-status', [OrderController::class, 'changeStatus'])->name('changeStatus');
     });
 
     // Reports Routes

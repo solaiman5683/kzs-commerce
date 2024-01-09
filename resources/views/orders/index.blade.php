@@ -63,9 +63,9 @@
                                     <th>Status</th>
                                     <th>Payment Status</th>
                                     <th>Payment Method</th>
-                                    <th>
+                                    {{-- <th>
                                         Transaction Id
-                                    </th>
+                                    </th> --}}
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -91,31 +91,35 @@
                                     <td>
                                         ${{ $order->order_total }}
                                     </td>
-                                    <td>
-                                        <span class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</span>
+                                    <td class="text-uppercase">
+                                        <strong class="badge {{ $order->status == 'pending' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->status }}</strong>
                                     </td>
 
-                                    <td>
-                                        <span class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</span>
+                                    <td class="text-uppercase">
+                                        <strong class="badge {{ $order->payment_status == 'unpaid' ? 'bg-soft-warning text-warning' : ' bg-soft-success text-success' }}">{{ $order->payment_status }}</strong>
                                     </td>
                                     <td>
-                                        {{ $order->payment_method ?? 'N/A'  }}
+                                        {{ $order->payment_method ? $order->payment_method : ($order->payment_status == 'unpaid' ? 'N/A' : 'Cash')  }}
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         {{ $order->transaction_id ? $order->transaction_id : 'N/A' }}
-                                    </td>
+                                    </td> --}}
                                     <td>
                                         {{-- button for make paid --}}
-                                        {{-- @if ($order->payment_status == 'unpaid')
-                                        <a href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
-                                            <i class="ri-money-dollar-circle-fill"></i>
-
+                                        @if ($order->status == 'pending')
+                                        <a title="Deliver Order" href="{{ route('third', ['orders', $order->id, 'change-status']) }}" class="btn btn-xs btn-success waves-effect waves-light">
+                                            <i class="ri-home-wifi-fill"></i>
                                         </a>
-                                        @endif --}}
-                                        <a class="btn btn-primary" href="{{ route('third', ['orders', $order->id, 'printOrder']) }}">
+                                        @endif
+                                        @if ($order->payment_status == 'unpaid')
+                                        <a title="Make Payment" href="{{ route('third', ['orders', $order->id, 'make-paid']) }}" class="btn btn-xs btn-success waves-effect waves-light">
+                                            <i class="ri-money-dollar-circle-fill"></i>
+                                        </a>
+                                        @endif
+                                        <a title="Print Invoice" class="btn btn-primary" href="{{ route('third', ['orders', $order->id, 'printOrder']) }}">
                                             <i class=" ri-printer-line"></i>
                                         </a>
-                                        <a class="btn btn-danger" href="{{ route('third', ['orders', $order->id, 'delete']) }}">
+                                        <a title="Delete Order" class="btn btn-danger" href="{{ route('third', ['orders', $order->id, 'delete']) }}">
                                             <i class="ri-delete-bin-6-line "></i>
                                         </a>
                                     </td>

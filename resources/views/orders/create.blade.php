@@ -66,7 +66,7 @@
                     <form action="{{ route('second', ['orders', 'create']) }}" enctype="multipart/form-data" class="needs-validation" method="POST" novalidate>
                         @csrf
                         <div class="row align-items-end">
-                            <div class="mb-2 col-lg-5">
+                            <div class="mb-2 col-lg-4">
                                 <label class="form-label" for="customer">Customer</label>
                                 <select class="select2 form-control" data-toggle="select2" id="customer" name="customer_id" required>
                                     @foreach ($customers as $customer)
@@ -74,12 +74,23 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="mb-2 col-lg-5">
+                            <div class="mb-2 col-lg-3">
                                 <label class="form-label" for="products">Products</label>
                                 <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" id="products" name="products[]" required>
                                     @foreach ($products as $product)
                                     <option value="{{ $product->id }}">{{ $product->name }}</option>
                                     @endforeach
+                                </select>
+                            </div>
+                            <div class="mb-2 col-lg-3">
+                                <label class="form-label" for="payment">Payment</label>
+                                <select class="select2 form-control select2-single" data-toggle="select2" id="payment" name="payment_status" required>
+                                    <option value="unpaid">
+                                        Unpaid
+                                    </option>
+                                    <option value="paid">
+                                        Paid
+                                    </option>
                                 </select>
                             </div>
                             <div class="mb-2 col-lg-2">
